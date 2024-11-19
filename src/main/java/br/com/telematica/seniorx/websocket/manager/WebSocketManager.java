@@ -19,7 +19,6 @@ import br.com.telematica.seniorx.model.DevicePendency;
 import br.com.telematica.seniorx.model.ExcludePhotoPendency;
 import br.com.telematica.seniorx.model.IncludePhotoPendency;
 import br.com.telematica.seniorx.model.LoadHolidayListPendency;
-import br.com.telematica.seniorx.model.OperationEnum;
 import br.com.telematica.seniorx.model.PersonAreaUpdatedPendency;
 import br.com.telematica.seniorx.model.UnblockDevicePendency;
 import br.com.telematica.seniorx.websocket.model.TypeWebSocketEnum;

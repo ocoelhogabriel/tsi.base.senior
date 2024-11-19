@@ -1,11 +1,14 @@
 package br.com.telematica.seniorx.apis;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 
 import br.com.telematica.seniorx.model.Access;
 import br.com.telematica.seniorx.model.AccessRequest;
 import br.com.telematica.seniorx.model.Alarm;
 import br.com.telematica.seniorx.model.AllPendency;
+import br.com.telematica.seniorx.model.AreaControlList;
 import br.com.telematica.seniorx.model.BluetoothAccessNotification;
 import br.com.telematica.seniorx.model.ClockIn;
 import br.com.telematica.seniorx.model.CollectEventStatus;
@@ -30,7 +33,7 @@ import br.com.telematica.seniorx.model.VehicleAccess;
 import br.com.telematica.seniorx.model.VehicleAccessRequest;
 
 public interface IApisController {
-	ResponseEntity<ManagerDevice> getDevice();
+	ResponseEntity<List<ManagerDevice>> getDevice();
 
 	ResponseEntity<Object> getDeviceStatus();
 
@@ -38,7 +41,7 @@ public interface IApisController {
 
 	ResponseEntity<Object> getPersonInfo();
 
-	ResponseEntity<Object> getAreaControl();
+	ResponseEntity<List<AreaControlList>> getAreaControl();
 
 	ResponseEntity<ManagerDevice> getDeviceId(Long id);
 

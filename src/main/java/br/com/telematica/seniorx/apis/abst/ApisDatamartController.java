@@ -1,5 +1,8 @@
 package br.com.telematica.seniorx.apis.abst;
 
+import java.util.List;
+
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import br.com.telematica.seniorx.apis.ApisControllerAbstract;
 import br.com.telematica.seniorx.apis.IApisController;
+import br.com.telematica.seniorx.model.AreaControlList;
 
 public abstract class ApisDatamartController extends ApisControllerAbstract implements IApisController {
 
@@ -28,9 +32,10 @@ public abstract class ApisDatamartController extends ApisControllerAbstract impl
 	}
 
 	@Override
-	public ResponseEntity<Object> getAreaControl() {
+	public ResponseEntity<List<AreaControlList>> getAreaControl() {
 		HttpEntity<Void> entity = new HttpEntity<>(createHeaders());
-		return restTemplate.exchange(baseUrl + "/datamart/areacontrol", HttpMethod.GET, entity, Object.class);
+		return restTemplate.exchange(baseUrl + "/datamart/areacontrol", HttpMethod.GET, entity, new ParameterizedTypeReference<List<AreaControlList>>() {
+		});
 	}
 
 	@Override
