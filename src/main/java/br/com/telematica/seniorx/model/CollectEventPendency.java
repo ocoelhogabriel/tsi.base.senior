@@ -154,8 +154,12 @@ public class CollectEventPendency {
 			return false;
 		}
 		CollectEventPendency collectEventPendency = (CollectEventPendency) o;
-		return Objects.equals(this.pendencyId, collectEventPendency.pendencyId) && Objects.equals(this.managerDeviceId, collectEventPendency.managerDeviceId) && Objects.equals(this.initialDate, collectEventPendency.initialDate) && Objects.equals(this.finalDate, collectEventPendency.finalDate)
-				&& Objects.equals(this.initialNSR, collectEventPendency.initialNSR) && Objects.equals(this.finalNSR, collectEventPendency.finalNSR);
+		return Objects.equals(this.pendencyId, collectEventPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, collectEventPendency.managerDeviceId)
+				&& Objects.equals(this.initialDate, collectEventPendency.initialDate)
+				&& Objects.equals(this.finalDate, collectEventPendency.finalDate)
+				&& Objects.equals(this.initialNSR, collectEventPendency.initialNSR)
+				&& Objects.equals(this.finalNSR, collectEventPendency.finalNSR);
 	}
 
 	@Override

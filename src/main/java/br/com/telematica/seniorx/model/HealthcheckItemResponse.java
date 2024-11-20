@@ -117,7 +117,8 @@ public class HealthcheckItemResponse {
 			return false;
 		}
 		HealthcheckItemResponse healthcheckItemResponse = (HealthcheckItemResponse) o;
-		return Objects.equals(this.name, healthcheckItemResponse.name) && Objects.equals(this.status, healthcheckItemResponse.status);
+		return Objects.equals(this.name, healthcheckItemResponse.name)
+				&& Objects.equals(this.status, healthcheckItemResponse.status);
 	}
 
 	@Override

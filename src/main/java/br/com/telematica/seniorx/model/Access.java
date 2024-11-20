@@ -231,13 +231,18 @@ public class Access {
 			return false;
 		}
 		Access access = (Access) o;
-		return Objects.equals(this.deviceId, access.deviceId) && Objects.equals(this.date, access.date) && Objects.equals(this.timezoneOffset, access.timezoneOffset) && Objects.equals(this.status, access.status) && Objects.equals(this.accessType, access.accessType)
-				&& Objects.equals(this.accessDirection, access.accessDirection) && Objects.equals(this.cardId, access.cardId) && Objects.equals(this.personId, access.personId) && Objects.equals(this.creditRange, access.creditRange);
+		return Objects.equals(this.deviceId, access.deviceId) && Objects.equals(this.date, access.date)
+				&& Objects.equals(this.timezoneOffset, access.timezoneOffset)
+				&& Objects.equals(this.status, access.status) && Objects.equals(this.accessType, access.accessType)
+				&& Objects.equals(this.accessDirection, access.accessDirection)
+				&& Objects.equals(this.cardId, access.cardId) && Objects.equals(this.personId, access.personId)
+				&& Objects.equals(this.creditRange, access.creditRange);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(deviceId, date, timezoneOffset, status, accessType, accessDirection, cardId, personId, creditRange);
+		return Objects.hash(deviceId, date, timezoneOffset, status, accessType, accessDirection, cardId, personId,
+				creditRange);
 	}
 
 	@Override

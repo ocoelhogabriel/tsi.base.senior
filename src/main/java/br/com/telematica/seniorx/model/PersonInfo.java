@@ -119,7 +119,9 @@ public class PersonInfo {
 			return false;
 		}
 		PersonInfo personInfo = (PersonInfo) o;
-		return Objects.equals(this.personId, personInfo.personId) && Objects.equals(this.personName, personInfo.personName) && Objects.equals(this.photoUrl, personInfo.photoUrl) && Objects.equals(this.cards, personInfo.cards);
+		return Objects.equals(this.personId, personInfo.personId)
+				&& Objects.equals(this.personName, personInfo.personName)
+				&& Objects.equals(this.photoUrl, personInfo.photoUrl) && Objects.equals(this.cards, personInfo.cards);
 	}
 
 	@Override

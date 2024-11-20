@@ -87,7 +87,9 @@ public class SetDeviceEmergencyPendency {
 			return false;
 		}
 		SetDeviceEmergencyPendency setDeviceEmergencyPendency = (SetDeviceEmergencyPendency) o;
-		return Objects.equals(this.pendencyId, setDeviceEmergencyPendency.pendencyId) && Objects.equals(this.managerDeviceId, setDeviceEmergencyPendency.managerDeviceId) && Objects.equals(this.deviceId, setDeviceEmergencyPendency.deviceId);
+		return Objects.equals(this.pendencyId, setDeviceEmergencyPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, setDeviceEmergencyPendency.managerDeviceId)
+				&& Objects.equals(this.deviceId, setDeviceEmergencyPendency.deviceId);
 	}
 
 	@Override

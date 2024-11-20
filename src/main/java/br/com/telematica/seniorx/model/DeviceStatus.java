@@ -97,7 +97,9 @@ public class DeviceStatus {
 			return false;
 		}
 		DeviceStatus deviceStatus = (DeviceStatus) o;
-		return Objects.equals(this.pendencyId, deviceStatus.pendencyId) && Objects.equals(this.managerDeviceId, deviceStatus.managerDeviceId) && Objects.equals(this.status, deviceStatus.status);
+		return Objects.equals(this.pendencyId, deviceStatus.pendencyId)
+				&& Objects.equals(this.managerDeviceId, deviceStatus.managerDeviceId)
+				&& Objects.equals(this.status, deviceStatus.status);
 	}
 
 	@Override

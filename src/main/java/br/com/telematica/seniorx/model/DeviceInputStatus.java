@@ -97,7 +97,9 @@ public class DeviceInputStatus {
 			return false;
 		}
 		DeviceInputStatus deviceInputStatus = (DeviceInputStatus) o;
-		return Objects.equals(this.pendencyId, deviceInputStatus.pendencyId) && Objects.equals(this.managerDeviceId, deviceInputStatus.managerDeviceId) && Objects.equals(this.status, deviceInputStatus.status);
+		return Objects.equals(this.pendencyId, deviceInputStatus.pendencyId)
+				&& Objects.equals(this.managerDeviceId, deviceInputStatus.managerDeviceId)
+				&& Objects.equals(this.status, deviceInputStatus.status);
 	}
 
 	@Override

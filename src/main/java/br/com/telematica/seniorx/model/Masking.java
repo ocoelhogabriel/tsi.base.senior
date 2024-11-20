@@ -153,8 +153,9 @@ public class Masking {
 			return false;
 		}
 		Masking masking = (Masking) o;
-		return Objects.equals(this.startTime, masking.startTime) && Objects.equals(this.finishTime, masking.finishTime) && Objects.equals(this.normalDay, masking.normalDay) && Objects.equals(this.saturday, masking.saturday) && Objects.equals(this.sunday, masking.sunday)
-				&& Objects.equals(this.holiday, masking.holiday);
+		return Objects.equals(this.startTime, masking.startTime) && Objects.equals(this.finishTime, masking.finishTime)
+				&& Objects.equals(this.normalDay, masking.normalDay) && Objects.equals(this.saturday, masking.saturday)
+				&& Objects.equals(this.sunday, masking.sunday) && Objects.equals(this.holiday, masking.holiday);
 	}
 
 	@Override

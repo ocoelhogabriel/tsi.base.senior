@@ -109,7 +109,10 @@ public class ApolloExcludeCardPendency {
 			return false;
 		}
 		ApolloExcludeCardPendency apolloExcludeCardPendency = (ApolloExcludeCardPendency) o;
-		return Objects.equals(this.pendencyId, apolloExcludeCardPendency.pendencyId) && Objects.equals(this.managerDeviceId, apolloExcludeCardPendency.managerDeviceId) && Objects.equals(this.card, apolloExcludeCardPendency.card) && Objects.equals(this.personId, apolloExcludeCardPendency.personId);
+		return Objects.equals(this.pendencyId, apolloExcludeCardPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, apolloExcludeCardPendency.managerDeviceId)
+				&& Objects.equals(this.card, apolloExcludeCardPendency.card)
+				&& Objects.equals(this.personId, apolloExcludeCardPendency.personId);
 	}
 
 	@Override

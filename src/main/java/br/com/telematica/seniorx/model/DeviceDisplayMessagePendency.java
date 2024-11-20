@@ -183,8 +183,11 @@ public class DeviceDisplayMessagePendency {
 			return false;
 		}
 		DeviceDisplayMessagePendency deviceDisplayMessagePendency = (DeviceDisplayMessagePendency) o;
-		return Objects.equals(this.pendencyId, deviceDisplayMessagePendency.pendencyId) && Objects.equals(this.managerDeviceId, deviceDisplayMessagePendency.managerDeviceId) && Objects.equals(this.message, deviceDisplayMessagePendency.message)
-				&& Objects.equals(this.duration, deviceDisplayMessagePendency.duration) && Objects.equals(this.mode, deviceDisplayMessagePendency.mode);
+		return Objects.equals(this.pendencyId, deviceDisplayMessagePendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, deviceDisplayMessagePendency.managerDeviceId)
+				&& Objects.equals(this.message, deviceDisplayMessagePendency.message)
+				&& Objects.equals(this.duration, deviceDisplayMessagePendency.duration)
+				&& Objects.equals(this.mode, deviceDisplayMessagePendency.mode);
 	}
 
 	@Override

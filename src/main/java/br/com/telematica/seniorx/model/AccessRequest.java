@@ -109,7 +109,10 @@ public class AccessRequest {
 			return false;
 		}
 		AccessRequest accessRequest = (AccessRequest) o;
-		return Objects.equals(this.readerId, accessRequest.readerId) && Objects.equals(this.cardId, accessRequest.cardId) && Objects.equals(this.personId, accessRequest.personId) && Objects.equals(this.requestDateTime, accessRequest.requestDateTime);
+		return Objects.equals(this.readerId, accessRequest.readerId)
+				&& Objects.equals(this.cardId, accessRequest.cardId)
+				&& Objects.equals(this.personId, accessRequest.personId)
+				&& Objects.equals(this.requestDateTime, accessRequest.requestDateTime);
 	}
 
 	@Override

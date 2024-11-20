@@ -163,8 +163,12 @@ public class IncludePhotoPendency {
 			return false;
 		}
 		IncludePhotoPendency includePhotoPendency = (IncludePhotoPendency) o;
-		return Objects.equals(this.pendencyId, includePhotoPendency.pendencyId) && Objects.equals(this.managerDeviceId, includePhotoPendency.managerDeviceId) && Objects.equals(this.personId, includePhotoPendency.personId) && Objects.equals(this.personName, includePhotoPendency.personName)
-				&& Objects.equals(this.photoUrl, includePhotoPendency.photoUrl) && Objects.equals(this.cardList, includePhotoPendency.cardList);
+		return Objects.equals(this.pendencyId, includePhotoPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, includePhotoPendency.managerDeviceId)
+				&& Objects.equals(this.personId, includePhotoPendency.personId)
+				&& Objects.equals(this.personName, includePhotoPendency.personName)
+				&& Objects.equals(this.photoUrl, includePhotoPendency.photoUrl)
+				&& Objects.equals(this.cardList, includePhotoPendency.cardList);
 	}
 
 	@Override

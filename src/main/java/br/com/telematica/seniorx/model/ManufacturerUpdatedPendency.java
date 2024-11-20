@@ -157,8 +157,12 @@ public class ManufacturerUpdatedPendency {
 			return false;
 		}
 		ManufacturerUpdatedPendency manufacturerUpdatedPendency = (ManufacturerUpdatedPendency) o;
-		return Objects.equals(this.pendencyId, manufacturerUpdatedPendency.pendencyId) && Objects.equals(this.managerDeviceId, manufacturerUpdatedPendency.managerDeviceId) && Objects.equals(this.documentType, manufacturerUpdatedPendency.documentType)
-				&& Objects.equals(this.document, manufacturerUpdatedPendency.document) && Objects.equals(this.companyName, manufacturerUpdatedPendency.companyName) && Objects.equals(this.address, manufacturerUpdatedPendency.address);
+		return Objects.equals(this.pendencyId, manufacturerUpdatedPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, manufacturerUpdatedPendency.managerDeviceId)
+				&& Objects.equals(this.documentType, manufacturerUpdatedPendency.documentType)
+				&& Objects.equals(this.document, manufacturerUpdatedPendency.document)
+				&& Objects.equals(this.companyName, manufacturerUpdatedPendency.companyName)
+				&& Objects.equals(this.address, manufacturerUpdatedPendency.address);
 	}
 
 	@Override

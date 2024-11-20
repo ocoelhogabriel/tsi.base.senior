@@ -34,8 +34,9 @@ public abstract class ApisDatamartController extends ApisControllerAbstract impl
 	@Override
 	public ResponseEntity<List<AreaControlList>> getAreaControl() {
 		HttpEntity<Void> entity = new HttpEntity<>(createHeaders());
-		return restTemplate.exchange(baseUrl + "/datamart/areacontrol", HttpMethod.GET, entity, new ParameterizedTypeReference<List<AreaControlList>>() {
-		});
+		return restTemplate.exchange(baseUrl + "/datamart/areacontrol", HttpMethod.GET, entity,
+				new ParameterizedTypeReference<List<AreaControlList>>() {
+				});
 	}
 
 	@Override

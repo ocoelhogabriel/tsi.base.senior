@@ -91,7 +91,9 @@ public class DeviceUpdatedPendency {
 			return false;
 		}
 		DeviceUpdatedPendency deviceUpdatedPendency = (DeviceUpdatedPendency) o;
-		return Objects.equals(this.pendencyId, deviceUpdatedPendency.pendencyId) && Objects.equals(this.managerDeviceId, deviceUpdatedPendency.managerDeviceId) && Objects.equals(this.operation, deviceUpdatedPendency.operation);
+		return Objects.equals(this.pendencyId, deviceUpdatedPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, deviceUpdatedPendency.managerDeviceId)
+				&& Objects.equals(this.operation, deviceUpdatedPendency.operation);
 	}
 
 	@Override

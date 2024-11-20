@@ -241,8 +241,12 @@ public class Timezone {
 			return false;
 		}
 		Timezone timezone = (Timezone) o;
-		return Objects.equals(this.start, timezone.start) && Objects.equals(this.end, timezone.end) && Objects.equals(this.monday, timezone.monday) && Objects.equals(this.tuesday, timezone.tuesday) && Objects.equals(this.wednesday, timezone.wednesday)
-				&& Objects.equals(this.thursday, timezone.thursday) && Objects.equals(this.friday, timezone.friday) && Objects.equals(this.saturday, timezone.saturday) && Objects.equals(this.sunday, timezone.sunday) && Objects.equals(this.holiday, timezone.holiday);
+		return Objects.equals(this.start, timezone.start) && Objects.equals(this.end, timezone.end)
+				&& Objects.equals(this.monday, timezone.monday) && Objects.equals(this.tuesday, timezone.tuesday)
+				&& Objects.equals(this.wednesday, timezone.wednesday)
+				&& Objects.equals(this.thursday, timezone.thursday) && Objects.equals(this.friday, timezone.friday)
+				&& Objects.equals(this.saturday, timezone.saturday) && Objects.equals(this.sunday, timezone.sunday)
+				&& Objects.equals(this.holiday, timezone.holiday);
 	}
 
 	@Override

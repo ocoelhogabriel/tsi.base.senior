@@ -117,7 +117,8 @@ public class InputStatusField {
 			return false;
 		}
 		InputStatusField inputStatusField = (InputStatusField) o;
-		return Objects.equals(this.inputDeviceId, inputStatusField.inputDeviceId) && Objects.equals(this.status, inputStatusField.status);
+		return Objects.equals(this.inputDeviceId, inputStatusField.inputDeviceId)
+				&& Objects.equals(this.status, inputStatusField.status);
 	}
 
 	@Override

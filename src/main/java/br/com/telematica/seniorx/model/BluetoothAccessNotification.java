@@ -187,8 +187,13 @@ public class BluetoothAccessNotification {
 			return false;
 		}
 		BluetoothAccessNotification bluetoothAccessNotification = (BluetoothAccessNotification) o;
-		return Objects.equals(this.deviceId, bluetoothAccessNotification.deviceId) && Objects.equals(this.date, bluetoothAccessNotification.date) && Objects.equals(this.timezoneOffset, bluetoothAccessNotification.timezoneOffset) && Objects.equals(this.status, bluetoothAccessNotification.status)
-				&& Objects.equals(this.accessType, bluetoothAccessNotification.accessType) && Objects.equals(this.accessDirection, bluetoothAccessNotification.accessDirection) && Objects.equals(this.credentialId, bluetoothAccessNotification.credentialId);
+		return Objects.equals(this.deviceId, bluetoothAccessNotification.deviceId)
+				&& Objects.equals(this.date, bluetoothAccessNotification.date)
+				&& Objects.equals(this.timezoneOffset, bluetoothAccessNotification.timezoneOffset)
+				&& Objects.equals(this.status, bluetoothAccessNotification.status)
+				&& Objects.equals(this.accessType, bluetoothAccessNotification.accessType)
+				&& Objects.equals(this.accessDirection, bluetoothAccessNotification.accessDirection)
+				&& Objects.equals(this.credentialId, bluetoothAccessNotification.credentialId);
 	}
 
 	@Override

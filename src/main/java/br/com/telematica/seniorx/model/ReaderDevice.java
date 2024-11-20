@@ -85,7 +85,8 @@ public class ReaderDevice {
 
 		public static class Adapter extends TypeAdapter<BiometricValidationEnum> {
 			@Override
-			public void write(final JsonWriter jsonWriter, final BiometricValidationEnum enumeration) throws IOException {
+			public void write(final JsonWriter jsonWriter, final BiometricValidationEnum enumeration)
+					throws IOException {
 				jsonWriter.value(enumeration.getValue());
 			}
 
@@ -783,19 +784,37 @@ public class ReaderDevice {
 			return false;
 		}
 		ReaderDevice readerDevice = (ReaderDevice) o;
-		return Objects.equals(this.id, readerDevice.id) && Objects.equals(this.areaId, readerDevice.areaId) && Objects.equals(this.output, readerDevice.output) && Objects.equals(this.intput, readerDevice.intput) && Objects.equals(this.readerTechnology, readerDevice.readerTechnology)
-				&& Objects.equals(this.readerDirection, readerDevice.readerDirection) && Objects.equals(this.biometricManufacturer, readerDevice.biometricManufacturer) && Objects.equals(this.biometricValidation, readerDevice.biometricValidation)
-				&& Objects.equals(this.biometricSecurityLevel, readerDevice.biometricSecurityLevel) && Objects.equals(this.biometricReaderId, readerDevice.biometricReaderId) && Objects.equals(this.physicalAddress, readerDevice.physicalAddress)
-				&& Objects.equals(this.areaLeaving, readerDevice.areaLeaving) && Objects.equals(this.areaEntering, readerDevice.areaEntering) && Objects.equals(this.cardFormatList, readerDevice.cardFormatList) && Objects.equals(this.strikeTime, readerDevice.strikeTime)
-				&& Objects.equals(this.heldOpenTime, readerDevice.heldOpenTime) && Objects.equals(this.offlineMode, readerDevice.offlineMode) && Objects.equals(this.accessMode, readerDevice.accessMode) && Objects.equals(this.antiPassbackTime, readerDevice.antiPassbackTime)
-				&& Objects.equals(this.enablePairing, readerDevice.enablePairing) && Objects.equals(this.validateVehicle, readerDevice.validateVehicle) && Objects.equals(this.activations, readerDevice.activations) && Objects.equals(this.extensibleConfiguration, readerDevice.extensibleConfiguration)
-				&& Objects.equals(this.urnSensor, readerDevice.urnSensor) && Objects.equals(this.urnSensorTime, readerDevice.urnSensorTime);
+		return Objects.equals(this.id, readerDevice.id) && Objects.equals(this.areaId, readerDevice.areaId)
+				&& Objects.equals(this.output, readerDevice.output) && Objects.equals(this.intput, readerDevice.intput)
+				&& Objects.equals(this.readerTechnology, readerDevice.readerTechnology)
+				&& Objects.equals(this.readerDirection, readerDevice.readerDirection)
+				&& Objects.equals(this.biometricManufacturer, readerDevice.biometricManufacturer)
+				&& Objects.equals(this.biometricValidation, readerDevice.biometricValidation)
+				&& Objects.equals(this.biometricSecurityLevel, readerDevice.biometricSecurityLevel)
+				&& Objects.equals(this.biometricReaderId, readerDevice.biometricReaderId)
+				&& Objects.equals(this.physicalAddress, readerDevice.physicalAddress)
+				&& Objects.equals(this.areaLeaving, readerDevice.areaLeaving)
+				&& Objects.equals(this.areaEntering, readerDevice.areaEntering)
+				&& Objects.equals(this.cardFormatList, readerDevice.cardFormatList)
+				&& Objects.equals(this.strikeTime, readerDevice.strikeTime)
+				&& Objects.equals(this.heldOpenTime, readerDevice.heldOpenTime)
+				&& Objects.equals(this.offlineMode, readerDevice.offlineMode)
+				&& Objects.equals(this.accessMode, readerDevice.accessMode)
+				&& Objects.equals(this.antiPassbackTime, readerDevice.antiPassbackTime)
+				&& Objects.equals(this.enablePairing, readerDevice.enablePairing)
+				&& Objects.equals(this.validateVehicle, readerDevice.validateVehicle)
+				&& Objects.equals(this.activations, readerDevice.activations)
+				&& Objects.equals(this.extensibleConfiguration, readerDevice.extensibleConfiguration)
+				&& Objects.equals(this.urnSensor, readerDevice.urnSensor)
+				&& Objects.equals(this.urnSensorTime, readerDevice.urnSensorTime);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, areaId, output, intput, readerTechnology, readerDirection, biometricManufacturer, biometricValidation, biometricSecurityLevel, biometricReaderId, physicalAddress, areaLeaving, areaEntering, cardFormatList, strikeTime, heldOpenTime, offlineMode, accessMode,
-				antiPassbackTime, enablePairing, validateVehicle, activations, extensibleConfiguration, urnSensor, urnSensorTime);
+		return Objects.hash(id, areaId, output, intput, readerTechnology, readerDirection, biometricManufacturer,
+				biometricValidation, biometricSecurityLevel, biometricReaderId, physicalAddress, areaLeaving,
+				areaEntering, cardFormatList, strikeTime, heldOpenTime, offlineMode, accessMode, antiPassbackTime,
+				enablePairing, validateVehicle, activations, extensibleConfiguration, urnSensor, urnSensorTime);
 	}
 
 	@Override

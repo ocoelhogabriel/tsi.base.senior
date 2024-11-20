@@ -326,15 +326,25 @@ public class ApolloIncludeCardPendency {
 			return false;
 		}
 		ApolloIncludeCardPendency apolloIncludeCardPendency = (ApolloIncludeCardPendency) o;
-		return Objects.equals(this.pendencyId, apolloIncludeCardPendency.pendencyId) && Objects.equals(this.managerDeviceId, apolloIncludeCardPendency.managerDeviceId) && Objects.equals(this.cardNumber, apolloIncludeCardPendency.cardNumber)
-				&& Objects.equals(this.cardTechnology, apolloIncludeCardPendency.cardTechnology) && Objects.equals(this.startValidity, apolloIncludeCardPendency.startValidity) && Objects.equals(this.finishValidity, apolloIncludeCardPendency.finishValidity)
-				&& Objects.equals(this.checkAntiPassback, apolloIncludeCardPendency.checkAntiPassback) && Objects.equals(this.ownerType, apolloIncludeCardPendency.ownerType) && Objects.equals(this.ownerId, apolloIncludeCardPendency.ownerId)
-				&& Objects.equals(this.areaId, apolloIncludeCardPendency.areaId) && Objects.equals(this.isVisitor, apolloIncludeCardPendency.isVisitor) && Objects.equals(this.isEscort, apolloIncludeCardPendency.isEscort) && Objects.equals(this.accessLevel, apolloIncludeCardPendency.accessLevel);
+		return Objects.equals(this.pendencyId, apolloIncludeCardPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, apolloIncludeCardPendency.managerDeviceId)
+				&& Objects.equals(this.cardNumber, apolloIncludeCardPendency.cardNumber)
+				&& Objects.equals(this.cardTechnology, apolloIncludeCardPendency.cardTechnology)
+				&& Objects.equals(this.startValidity, apolloIncludeCardPendency.startValidity)
+				&& Objects.equals(this.finishValidity, apolloIncludeCardPendency.finishValidity)
+				&& Objects.equals(this.checkAntiPassback, apolloIncludeCardPendency.checkAntiPassback)
+				&& Objects.equals(this.ownerType, apolloIncludeCardPendency.ownerType)
+				&& Objects.equals(this.ownerId, apolloIncludeCardPendency.ownerId)
+				&& Objects.equals(this.areaId, apolloIncludeCardPendency.areaId)
+				&& Objects.equals(this.isVisitor, apolloIncludeCardPendency.isVisitor)
+				&& Objects.equals(this.isEscort, apolloIncludeCardPendency.isEscort)
+				&& Objects.equals(this.accessLevel, apolloIncludeCardPendency.accessLevel);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(pendencyId, managerDeviceId, cardNumber, cardTechnology, startValidity, finishValidity, checkAntiPassback, ownerType, ownerId, areaId, isVisitor, isEscort, accessLevel);
+		return Objects.hash(pendencyId, managerDeviceId, cardNumber, cardTechnology, startValidity, finishValidity,
+				checkAntiPassback, ownerType, ownerId, areaId, isVisitor, isEscort, accessLevel);
 	}
 
 	@Override

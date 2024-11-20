@@ -175,13 +175,18 @@ public class Driver {
 			return false;
 		}
 		Driver driver = (Driver) o;
-		return Objects.equals(this.id, driver.id) && Objects.equals(this.name, driver.name) && Objects.equals(this.requestIntervalTime, driver.requestIntervalTime) && Objects.equals(this.waitInterval, driver.waitInterval) && Objects.equals(this.sendCardholders, driver.sendCardholders)
-				&& Objects.equals(this.packetSize, driver.packetSize) && Objects.equals(this.extensibleConfiguration, driver.extensibleConfiguration);
+		return Objects.equals(this.id, driver.id) && Objects.equals(this.name, driver.name)
+				&& Objects.equals(this.requestIntervalTime, driver.requestIntervalTime)
+				&& Objects.equals(this.waitInterval, driver.waitInterval)
+				&& Objects.equals(this.sendCardholders, driver.sendCardholders)
+				&& Objects.equals(this.packetSize, driver.packetSize)
+				&& Objects.equals(this.extensibleConfiguration, driver.extensibleConfiguration);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name, requestIntervalTime, waitInterval, sendCardholders, packetSize, extensibleConfiguration);
+		return Objects.hash(id, name, requestIntervalTime, waitInterval, sendCardholders, packetSize,
+				extensibleConfiguration);
 	}
 
 	@Override

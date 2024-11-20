@@ -87,7 +87,9 @@ public class BlockDevicePendency {
 			return false;
 		}
 		BlockDevicePendency blockDevicePendency = (BlockDevicePendency) o;
-		return Objects.equals(this.pendencyId, blockDevicePendency.pendencyId) && Objects.equals(this.managerDeviceId, blockDevicePendency.managerDeviceId) && Objects.equals(this.deviceId, blockDevicePendency.deviceId);
+		return Objects.equals(this.pendencyId, blockDevicePendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, blockDevicePendency.managerDeviceId)
+				&& Objects.equals(this.deviceId, blockDevicePendency.deviceId);
 	}
 
 	@Override

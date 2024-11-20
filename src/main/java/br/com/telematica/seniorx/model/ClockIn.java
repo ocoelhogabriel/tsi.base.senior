@@ -227,8 +227,10 @@ public class ClockIn {
 			return false;
 		}
 		ClockIn clockIn = (ClockIn) o;
-		return Objects.equals(this.deviceId, clockIn.deviceId) && Objects.equals(this.date, clockIn.date) && Objects.equals(this.timezoneOffset, clockIn.timezoneOffset) && Objects.equals(this.status, clockIn.status) && Objects.equals(this.nsr, clockIn.nsr) && Objects.equals(this.pis, clockIn.pis)
-				&& Objects.equals(this.cpf, clockIn.cpf);
+		return Objects.equals(this.deviceId, clockIn.deviceId) && Objects.equals(this.date, clockIn.date)
+				&& Objects.equals(this.timezoneOffset, clockIn.timezoneOffset)
+				&& Objects.equals(this.status, clockIn.status) && Objects.equals(this.nsr, clockIn.nsr)
+				&& Objects.equals(this.pis, clockIn.pis) && Objects.equals(this.cpf, clockIn.cpf);
 	}
 
 	@Override

@@ -248,15 +248,25 @@ public class CardFormatList {
 			return false;
 		}
 		CardFormatList cardFormatList = (CardFormatList) o;
-		return Objects.equals(this.id, cardFormatList.id) && Objects.equals(this.numOfBitsOnCard, cardFormatList.numOfBitsOnCard) && Objects.equals(this.numOfBitsFromStartForEvenParity, cardFormatList.numOfBitsFromStartForEvenParity)
-				&& Objects.equals(this.numOfBitsToEndForOddParity, cardFormatList.numOfBitsToEndForOddParity) && Objects.equals(this.numOfBitsIFacilityCode, cardFormatList.numOfBitsIFacilityCode)
-				&& Objects.equals(this.indexFromFirstBitToFirstFacilityCodeBit, cardFormatList.indexFromFirstBitToFirstFacilityCodeBit) && Objects.equals(this.numOfBitsInCardNumber, cardFormatList.numOfBitsInCardNumber)
-				&& Objects.equals(this.indexFromFirstBitToFirstCardNumberBit, cardFormatList.indexFromFirstBitToFirstCardNumberBit) && Objects.equals(this.facilityCode, cardFormatList.facilityCode) && Objects.equals(this.cardNumberOffset, cardFormatList.cardNumberOffset);
+		return Objects.equals(this.id, cardFormatList.id)
+				&& Objects.equals(this.numOfBitsOnCard, cardFormatList.numOfBitsOnCard)
+				&& Objects.equals(this.numOfBitsFromStartForEvenParity, cardFormatList.numOfBitsFromStartForEvenParity)
+				&& Objects.equals(this.numOfBitsToEndForOddParity, cardFormatList.numOfBitsToEndForOddParity)
+				&& Objects.equals(this.numOfBitsIFacilityCode, cardFormatList.numOfBitsIFacilityCode)
+				&& Objects.equals(this.indexFromFirstBitToFirstFacilityCodeBit,
+						cardFormatList.indexFromFirstBitToFirstFacilityCodeBit)
+				&& Objects.equals(this.numOfBitsInCardNumber, cardFormatList.numOfBitsInCardNumber)
+				&& Objects.equals(this.indexFromFirstBitToFirstCardNumberBit,
+						cardFormatList.indexFromFirstBitToFirstCardNumberBit)
+				&& Objects.equals(this.facilityCode, cardFormatList.facilityCode)
+				&& Objects.equals(this.cardNumberOffset, cardFormatList.cardNumberOffset);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, numOfBitsOnCard, numOfBitsFromStartForEvenParity, numOfBitsToEndForOddParity, numOfBitsIFacilityCode, indexFromFirstBitToFirstFacilityCodeBit, numOfBitsInCardNumber, indexFromFirstBitToFirstCardNumberBit, facilityCode, cardNumberOffset);
+		return Objects.hash(id, numOfBitsOnCard, numOfBitsFromStartForEvenParity, numOfBitsToEndForOddParity,
+				numOfBitsIFacilityCode, indexFromFirstBitToFirstFacilityCodeBit, numOfBitsInCardNumber,
+				indexFromFirstBitToFirstCardNumberBit, facilityCode, cardNumberOffset);
 	}
 
 	@Override
@@ -266,12 +276,15 @@ public class CardFormatList {
 
 		sb.append("    id: ").append(toIndentedString(id)).append("\n");
 		sb.append("    numOfBitsOnCard: ").append(toIndentedString(numOfBitsOnCard)).append("\n");
-		sb.append("    numOfBitsFromStartForEvenParity: ").append(toIndentedString(numOfBitsFromStartForEvenParity)).append("\n");
+		sb.append("    numOfBitsFromStartForEvenParity: ").append(toIndentedString(numOfBitsFromStartForEvenParity))
+				.append("\n");
 		sb.append("    numOfBitsToEndForOddParity: ").append(toIndentedString(numOfBitsToEndForOddParity)).append("\n");
 		sb.append("    numOfBitsIFacilityCode: ").append(toIndentedString(numOfBitsIFacilityCode)).append("\n");
-		sb.append("    indexFromFirstBitToFirstFacilityCodeBit: ").append(toIndentedString(indexFromFirstBitToFirstFacilityCodeBit)).append("\n");
+		sb.append("    indexFromFirstBitToFirstFacilityCodeBit: ")
+				.append(toIndentedString(indexFromFirstBitToFirstFacilityCodeBit)).append("\n");
 		sb.append("    numOfBitsInCardNumber: ").append(toIndentedString(numOfBitsInCardNumber)).append("\n");
-		sb.append("    indexFromFirstBitToFirstCardNumberBit: ").append(toIndentedString(indexFromFirstBitToFirstCardNumberBit)).append("\n");
+		sb.append("    indexFromFirstBitToFirstCardNumberBit: ")
+				.append(toIndentedString(indexFromFirstBitToFirstCardNumberBit)).append("\n");
 		sb.append("    facilityCode: ").append(toIndentedString(facilityCode)).append("\n");
 		sb.append("    cardNumberOffset: ").append(toIndentedString(cardNumberOffset)).append("\n");
 		sb.append("}");

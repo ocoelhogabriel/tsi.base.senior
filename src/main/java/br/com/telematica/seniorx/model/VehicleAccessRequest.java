@@ -56,7 +56,8 @@ public class VehicleAccessRequest {
 
 		public static class Adapter extends TypeAdapter<VehicleCredentialFormatEnum> {
 			@Override
-			public void write(final JsonWriter jsonWriter, final VehicleCredentialFormatEnum enumeration) throws IOException {
+			public void write(final JsonWriter jsonWriter, final VehicleCredentialFormatEnum enumeration)
+					throws IOException {
 				jsonWriter.value(enumeration.getValue());
 			}
 
@@ -206,13 +207,18 @@ public class VehicleAccessRequest {
 			return false;
 		}
 		VehicleAccessRequest vehicleAccessRequest = (VehicleAccessRequest) o;
-		return Objects.equals(this.readerId, vehicleAccessRequest.readerId) && Objects.equals(this.vehicleCredentialFormat, vehicleAccessRequest.vehicleCredentialFormat) && Objects.equals(this.vehicleCredential, vehicleAccessRequest.vehicleCredential)
-				&& Objects.equals(this.authorizerPersonCardNumber, vehicleAccessRequest.authorizerPersonCardNumber) && Objects.equals(this.authorizerPersonId, vehicleAccessRequest.authorizerPersonId) && Objects.equals(this.requestDateTime, vehicleAccessRequest.requestDateTime);
+		return Objects.equals(this.readerId, vehicleAccessRequest.readerId)
+				&& Objects.equals(this.vehicleCredentialFormat, vehicleAccessRequest.vehicleCredentialFormat)
+				&& Objects.equals(this.vehicleCredential, vehicleAccessRequest.vehicleCredential)
+				&& Objects.equals(this.authorizerPersonCardNumber, vehicleAccessRequest.authorizerPersonCardNumber)
+				&& Objects.equals(this.authorizerPersonId, vehicleAccessRequest.authorizerPersonId)
+				&& Objects.equals(this.requestDateTime, vehicleAccessRequest.requestDateTime);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(readerId, vehicleCredentialFormat, vehicleCredential, authorizerPersonCardNumber, authorizerPersonId, requestDateTime);
+		return Objects.hash(readerId, vehicleCredentialFormat, vehicleCredential, authorizerPersonCardNumber,
+				authorizerPersonId, requestDateTime);
 	}
 
 	@Override

@@ -255,7 +255,10 @@ public class Resource {
 			return false;
 		}
 		Resource resource = (Resource) o;
-		return Objects.equals(this.deviceId, resource.deviceId) && Objects.equals(this.date, resource.date) && Objects.equals(this.timezoneOffset, resource.timezoneOffset) && Objects.equals(this.status, resource.status) && Objects.equals(this.resourceType, resource.resourceType)
+		return Objects.equals(this.deviceId, resource.deviceId) && Objects.equals(this.date, resource.date)
+				&& Objects.equals(this.timezoneOffset, resource.timezoneOffset)
+				&& Objects.equals(this.status, resource.status)
+				&& Objects.equals(this.resourceType, resource.resourceType)
 				&& Objects.equals(this.resourcePercent, resource.resourcePercent);
 	}
 

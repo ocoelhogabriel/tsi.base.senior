@@ -127,7 +127,8 @@ public class HealthcheckResponse {
 			return false;
 		}
 		HealthcheckResponse healthcheckResponse = (HealthcheckResponse) o;
-		return Objects.equals(this.status, healthcheckResponse.status) && Objects.equals(this.checks, healthcheckResponse.checks);
+		return Objects.equals(this.status, healthcheckResponse.status)
+				&& Objects.equals(this.checks, healthcheckResponse.checks);
 	}
 
 	@Override

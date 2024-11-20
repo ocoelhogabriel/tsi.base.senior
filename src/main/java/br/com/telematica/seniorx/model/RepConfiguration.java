@@ -175,8 +175,12 @@ public class RepConfiguration {
 			return false;
 		}
 		RepConfiguration repConfiguration = (RepConfiguration) o;
-		return Objects.equals(this.id, repConfiguration.id) && Objects.equals(this.companyName, repConfiguration.companyName) && Objects.equals(this.cnpj, repConfiguration.cnpj) && Objects.equals(this.cpf, repConfiguration.cpf) && Objects.equals(this.cei, repConfiguration.cei)
-				&& Objects.equals(this.address, repConfiguration.address) && Objects.equals(this.taxNumber, repConfiguration.taxNumber);
+		return Objects.equals(this.id, repConfiguration.id)
+				&& Objects.equals(this.companyName, repConfiguration.companyName)
+				&& Objects.equals(this.cnpj, repConfiguration.cnpj) && Objects.equals(this.cpf, repConfiguration.cpf)
+				&& Objects.equals(this.cei, repConfiguration.cei)
+				&& Objects.equals(this.address, repConfiguration.address)
+				&& Objects.equals(this.taxNumber, repConfiguration.taxNumber);
 	}
 
 	@Override

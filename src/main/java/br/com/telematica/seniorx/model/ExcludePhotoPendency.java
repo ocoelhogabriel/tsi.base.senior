@@ -87,7 +87,9 @@ public class ExcludePhotoPendency {
 			return false;
 		}
 		ExcludePhotoPendency excludePhotoPendency = (ExcludePhotoPendency) o;
-		return Objects.equals(this.pendencyId, excludePhotoPendency.pendencyId) && Objects.equals(this.managerDeviceId, excludePhotoPendency.managerDeviceId) && Objects.equals(this.personId, excludePhotoPendency.personId);
+		return Objects.equals(this.pendencyId, excludePhotoPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, excludePhotoPendency.managerDeviceId)
+				&& Objects.equals(this.personId, excludePhotoPendency.personId);
 	}
 
 	@Override

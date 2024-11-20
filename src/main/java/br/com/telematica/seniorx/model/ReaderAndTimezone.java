@@ -65,7 +65,8 @@ public class ReaderAndTimezone {
 			return false;
 		}
 		ReaderAndTimezone readerAndTimezone = (ReaderAndTimezone) o;
-		return Objects.equals(this.readerId, readerAndTimezone.readerId) && Objects.equals(this.timezoneId, readerAndTimezone.timezoneId);
+		return Objects.equals(this.readerId, readerAndTimezone.readerId)
+				&& Objects.equals(this.timezoneId, readerAndTimezone.timezoneId);
 	}
 
 	@Override

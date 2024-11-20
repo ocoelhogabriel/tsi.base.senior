@@ -87,7 +87,9 @@ public class LoadHolidayListPendency {
 			return false;
 		}
 		LoadHolidayListPendency loadHolidayListPendency = (LoadHolidayListPendency) o;
-		return Objects.equals(this.pendencyId, loadHolidayListPendency.pendencyId) && Objects.equals(this.managerDeviceId, loadHolidayListPendency.managerDeviceId) && Objects.equals(this.holidayListId, loadHolidayListPendency.holidayListId);
+		return Objects.equals(this.pendencyId, loadHolidayListPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, loadHolidayListPendency.managerDeviceId)
+				&& Objects.equals(this.holidayListId, loadHolidayListPendency.holidayListId);
 	}
 
 	@Override

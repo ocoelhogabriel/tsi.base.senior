@@ -551,16 +551,30 @@ public class ManagerDevice {
 			return false;
 		}
 		ManagerDevice managerDevice = (ManagerDevice) o;
-		return Objects.equals(this.id, managerDevice.id) && Objects.equals(this.areaId, managerDevice.areaId) && Objects.equals(this.networkIdentification, managerDevice.networkIdentification) && Objects.equals(this.networkPort, managerDevice.networkPort)
-				&& Objects.equals(this.deviceType, managerDevice.deviceType) && Objects.equals(this.displayMessage, managerDevice.displayMessage) && Objects.equals(this.numberOfCardRecords, managerDevice.numberOfCardRecords)
-				&& Objects.equals(this.turnstileBypassTime, managerDevice.turnstileBypassTime) && Objects.equals(this.module, managerDevice.module) && Objects.equals(this.reader, managerDevice.reader) && Objects.equals(this.output, managerDevice.output)
-				&& Objects.equals(this.intput, managerDevice.intput) && Objects.equals(this.accessMessage, managerDevice.accessMessage) && Objects.equals(this.portConfiguration, managerDevice.portConfiguration) && Objects.equals(this.repConfiguration, managerDevice.repConfiguration)
-				&& Objects.equals(this.extensibleConfiguration, managerDevice.extensibleConfiguration) && Objects.equals(this.username, managerDevice.username) && Objects.equals(this.password, managerDevice.password);
+		return Objects.equals(this.id, managerDevice.id) && Objects.equals(this.areaId, managerDevice.areaId)
+				&& Objects.equals(this.networkIdentification, managerDevice.networkIdentification)
+				&& Objects.equals(this.networkPort, managerDevice.networkPort)
+				&& Objects.equals(this.deviceType, managerDevice.deviceType)
+				&& Objects.equals(this.displayMessage, managerDevice.displayMessage)
+				&& Objects.equals(this.numberOfCardRecords, managerDevice.numberOfCardRecords)
+				&& Objects.equals(this.turnstileBypassTime, managerDevice.turnstileBypassTime)
+				&& Objects.equals(this.module, managerDevice.module)
+				&& Objects.equals(this.reader, managerDevice.reader)
+				&& Objects.equals(this.output, managerDevice.output)
+				&& Objects.equals(this.intput, managerDevice.intput)
+				&& Objects.equals(this.accessMessage, managerDevice.accessMessage)
+				&& Objects.equals(this.portConfiguration, managerDevice.portConfiguration)
+				&& Objects.equals(this.repConfiguration, managerDevice.repConfiguration)
+				&& Objects.equals(this.extensibleConfiguration, managerDevice.extensibleConfiguration)
+				&& Objects.equals(this.username, managerDevice.username)
+				&& Objects.equals(this.password, managerDevice.password);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, areaId, networkIdentification, networkPort, deviceType, displayMessage, numberOfCardRecords, turnstileBypassTime, module, reader, output, intput, accessMessage, portConfiguration, repConfiguration, extensibleConfiguration, username, password);
+		return Objects.hash(id, areaId, networkIdentification, networkPort, deviceType, displayMessage,
+				numberOfCardRecords, turnstileBypassTime, module, reader, output, intput, accessMessage,
+				portConfiguration, repConfiguration, extensibleConfiguration, username, password);
 	}
 
 	@Override

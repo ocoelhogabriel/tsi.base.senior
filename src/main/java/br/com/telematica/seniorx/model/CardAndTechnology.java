@@ -69,7 +69,8 @@ public class CardAndTechnology {
 			return false;
 		}
 		CardAndTechnology cardAndTechnology = (CardAndTechnology) o;
-		return Objects.equals(this.cardNumber, cardAndTechnology.cardNumber) && Objects.equals(this.cardTechnology, cardAndTechnology.cardTechnology);
+		return Objects.equals(this.cardNumber, cardAndTechnology.cardNumber)
+				&& Objects.equals(this.cardTechnology, cardAndTechnology.cardTechnology);
 	}
 
 	@Override

@@ -209,13 +209,18 @@ public class PersonValidationResponse {
 			return false;
 		}
 		PersonValidationResponse personValidationResponse = (PersonValidationResponse) o;
-		return Objects.equals(this.accessType, personValidationResponse.accessType) && Objects.equals(this.verifyBiometry, personValidationResponse.verifyBiometry) && Objects.equals(this.currentOwnerLocation, personValidationResponse.currentOwnerLocation)
-				&& Objects.equals(this.personCheckLevel, personValidationResponse.personCheckLevel) && Objects.equals(this.credentialType, personValidationResponse.credentialType) && Objects.equals(this.personId, personValidationResponse.personId);
+		return Objects.equals(this.accessType, personValidationResponse.accessType)
+				&& Objects.equals(this.verifyBiometry, personValidationResponse.verifyBiometry)
+				&& Objects.equals(this.currentOwnerLocation, personValidationResponse.currentOwnerLocation)
+				&& Objects.equals(this.personCheckLevel, personValidationResponse.personCheckLevel)
+				&& Objects.equals(this.credentialType, personValidationResponse.credentialType)
+				&& Objects.equals(this.personId, personValidationResponse.personId);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(accessType, verifyBiometry, currentOwnerLocation, personCheckLevel, credentialType, personId);
+		return Objects.hash(accessType, verifyBiometry, currentOwnerLocation, personCheckLevel, credentialType,
+				personId);
 	}
 
 	@Override

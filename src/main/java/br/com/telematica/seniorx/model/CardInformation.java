@@ -113,7 +113,10 @@ public class CardInformation {
 			return false;
 		}
 		CardInformation cardInformation = (CardInformation) o;
-		return Objects.equals(this.cardNumber, cardInformation.cardNumber) && Objects.equals(this.cardTechnology, cardInformation.cardTechnology) && Objects.equals(this.startDate, cardInformation.startDate) && Objects.equals(this.expirationDate, cardInformation.expirationDate);
+		return Objects.equals(this.cardNumber, cardInformation.cardNumber)
+				&& Objects.equals(this.cardTechnology, cardInformation.cardTechnology)
+				&& Objects.equals(this.startDate, cardInformation.startDate)
+				&& Objects.equals(this.expirationDate, cardInformation.expirationDate);
 	}
 
 	@Override

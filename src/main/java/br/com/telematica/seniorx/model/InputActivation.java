@@ -66,7 +66,8 @@ public class InputActivation {
 			return false;
 		}
 		InputActivation inputActivation = (InputActivation) o;
-		return Objects.equals(this.outputId, inputActivation.outputId) && Objects.equals(this.activationTime, inputActivation.activationTime);
+		return Objects.equals(this.outputId, inputActivation.outputId)
+				&& Objects.equals(this.activationTime, inputActivation.activationTime);
 	}
 
 	@Override

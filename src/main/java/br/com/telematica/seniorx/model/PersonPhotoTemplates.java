@@ -119,7 +119,10 @@ public class PersonPhotoTemplates {
 			return false;
 		}
 		PersonPhotoTemplates personPhotoTemplates = (PersonPhotoTemplates) o;
-		return Objects.equals(this.personId, personPhotoTemplates.personId) && Objects.equals(this.name, personPhotoTemplates.name) && Objects.equals(this.photoURL, personPhotoTemplates.photoURL) && Objects.equals(this.cardList, personPhotoTemplates.cardList);
+		return Objects.equals(this.personId, personPhotoTemplates.personId)
+				&& Objects.equals(this.name, personPhotoTemplates.name)
+				&& Objects.equals(this.photoURL, personPhotoTemplates.photoURL)
+				&& Objects.equals(this.cardList, personPhotoTemplates.cardList);
 	}
 
 	@Override

@@ -91,7 +91,9 @@ public class PendencyUpdated {
 			return false;
 		}
 		PendencyUpdated pendencyUpdated = (PendencyUpdated) o;
-		return Objects.equals(this.pendencyId, pendencyUpdated.pendencyId) && Objects.equals(this.errorCode, pendencyUpdated.errorCode) && Objects.equals(this.operation, pendencyUpdated.operation);
+		return Objects.equals(this.pendencyId, pendencyUpdated.pendencyId)
+				&& Objects.equals(this.errorCode, pendencyUpdated.errorCode)
+				&& Objects.equals(this.operation, pendencyUpdated.operation);
 	}
 
 	@Override

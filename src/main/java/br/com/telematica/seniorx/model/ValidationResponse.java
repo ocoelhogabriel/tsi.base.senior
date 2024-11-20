@@ -187,8 +187,11 @@ public class ValidationResponse {
 			return false;
 		}
 		ValidationResponse validationResponse = (ValidationResponse) o;
-		return Objects.equals(this.accessType, validationResponse.accessType) && Objects.equals(this.verifyBiometry, validationResponse.verifyBiometry) && Objects.equals(this.currentOwnerLocation, validationResponse.currentOwnerLocation)
-				&& Objects.equals(this.personCheckLevel, validationResponse.personCheckLevel) && Objects.equals(this.credentialType, validationResponse.credentialType);
+		return Objects.equals(this.accessType, validationResponse.accessType)
+				&& Objects.equals(this.verifyBiometry, validationResponse.verifyBiometry)
+				&& Objects.equals(this.currentOwnerLocation, validationResponse.currentOwnerLocation)
+				&& Objects.equals(this.personCheckLevel, validationResponse.personCheckLevel)
+				&& Objects.equals(this.credentialType, validationResponse.credentialType);
 	}
 
 	@Override

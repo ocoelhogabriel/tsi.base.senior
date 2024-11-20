@@ -140,7 +140,9 @@ public class Alarm {
 			return false;
 		}
 		Alarm alarm = (Alarm) o;
-		return Objects.equals(this.deviceId, alarm.deviceId) && Objects.equals(this.date, alarm.date) && Objects.equals(this.timezoneOffset, alarm.timezoneOffset) && Objects.equals(this.status, alarm.status) && Objects.equals(this.inputState, alarm.inputState);
+		return Objects.equals(this.deviceId, alarm.deviceId) && Objects.equals(this.date, alarm.date)
+				&& Objects.equals(this.timezoneOffset, alarm.timezoneOffset)
+				&& Objects.equals(this.status, alarm.status) && Objects.equals(this.inputState, alarm.inputState);
 	}
 
 	@Override

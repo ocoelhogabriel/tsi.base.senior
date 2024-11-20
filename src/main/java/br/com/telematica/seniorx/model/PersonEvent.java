@@ -198,13 +198,19 @@ public class PersonEvent {
 			return false;
 		}
 		PersonEvent personEvent = (PersonEvent) o;
-		return Objects.equals(this.personId, personEvent.personId) && Objects.equals(this.deviceId, personEvent.deviceId) && Objects.equals(this.date, personEvent.date) && Objects.equals(this.timezoneOffset, personEvent.timezoneOffset)
-				&& Objects.equals(this.normalTemperature, personEvent.normalTemperature) && Objects.equals(this.temperature, personEvent.temperature) && Objects.equals(this.withMask, personEvent.withMask) && Objects.equals(this.accessAllowed, personEvent.accessAllowed);
+		return Objects.equals(this.personId, personEvent.personId)
+				&& Objects.equals(this.deviceId, personEvent.deviceId) && Objects.equals(this.date, personEvent.date)
+				&& Objects.equals(this.timezoneOffset, personEvent.timezoneOffset)
+				&& Objects.equals(this.normalTemperature, personEvent.normalTemperature)
+				&& Objects.equals(this.temperature, personEvent.temperature)
+				&& Objects.equals(this.withMask, personEvent.withMask)
+				&& Objects.equals(this.accessAllowed, personEvent.accessAllowed);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(personId, deviceId, date, timezoneOffset, normalTemperature, temperature, withMask, accessAllowed);
+		return Objects.hash(personId, deviceId, date, timezoneOffset, normalTemperature, temperature, withMask,
+				accessAllowed);
 	}
 
 	@Override

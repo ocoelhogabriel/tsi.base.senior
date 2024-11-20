@@ -69,7 +69,8 @@ public class AccessMessage {
 			return false;
 		}
 		AccessMessage accessMessage = (AccessMessage) o;
-		return Objects.equals(this.accessType, accessMessage.accessType) && Objects.equals(this.message, accessMessage.message);
+		return Objects.equals(this.accessType, accessMessage.accessType)
+				&& Objects.equals(this.message, accessMessage.message);
 	}
 
 	@Override

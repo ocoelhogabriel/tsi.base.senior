@@ -64,7 +64,8 @@ public class DatamartUpdatedPendency {
 
 		public static class Adapter extends TypeAdapter<DatamartObjectTypeEnum> {
 			@Override
-			public void write(final JsonWriter jsonWriter, final DatamartObjectTypeEnum enumeration) throws IOException {
+			public void write(final JsonWriter jsonWriter, final DatamartObjectTypeEnum enumeration)
+					throws IOException {
 				jsonWriter.value(enumeration.getValue());
 			}
 
@@ -145,7 +146,9 @@ public class DatamartUpdatedPendency {
 			return false;
 		}
 		DatamartUpdatedPendency datamartUpdatedPendency = (DatamartUpdatedPendency) o;
-		return Objects.equals(this.pendencyId, datamartUpdatedPendency.pendencyId) && Objects.equals(this.driverId, datamartUpdatedPendency.driverId) && Objects.equals(this.datamartObjectType, datamartUpdatedPendency.datamartObjectType);
+		return Objects.equals(this.pendencyId, datamartUpdatedPendency.pendencyId)
+				&& Objects.equals(this.driverId, datamartUpdatedPendency.driverId)
+				&& Objects.equals(this.datamartObjectType, datamartUpdatedPendency.datamartObjectType);
 	}
 
 	@Override

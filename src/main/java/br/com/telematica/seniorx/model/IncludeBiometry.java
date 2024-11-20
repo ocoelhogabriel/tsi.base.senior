@@ -127,7 +127,10 @@ public class IncludeBiometry {
 			return false;
 		}
 		IncludeBiometry includeBiometry = (IncludeBiometry) o;
-		return Objects.equals(this.origin, includeBiometry.origin) && Objects.equals(this.originId, includeBiometry.originId) && Objects.equals(this.manufacturerEnum, includeBiometry.manufacturerEnum) && Objects.equals(this.templateList, includeBiometry.templateList);
+		return Objects.equals(this.origin, includeBiometry.origin)
+				&& Objects.equals(this.originId, includeBiometry.originId)
+				&& Objects.equals(this.manufacturerEnum, includeBiometry.manufacturerEnum)
+				&& Objects.equals(this.templateList, includeBiometry.templateList);
 	}
 
 	@Override

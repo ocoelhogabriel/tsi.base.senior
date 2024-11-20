@@ -194,8 +194,10 @@ public class PersonRep {
 			return false;
 		}
 		PersonRep personRep = (PersonRep) o;
-		return Objects.equals(this.id, personRep.id) && Objects.equals(this.name, personRep.name) && Objects.equals(this.pis, personRep.pis) && Objects.equals(this.cpf, personRep.cpf) && Objects.equals(this.verifyBiometrics, personRep.verifyBiometrics) && Objects.equals(this.cards, personRep.cards)
-				&& Objects.equals(this.biometries, personRep.biometries);
+		return Objects.equals(this.id, personRep.id) && Objects.equals(this.name, personRep.name)
+				&& Objects.equals(this.pis, personRep.pis) && Objects.equals(this.cpf, personRep.cpf)
+				&& Objects.equals(this.verifyBiometrics, personRep.verifyBiometrics)
+				&& Objects.equals(this.cards, personRep.cards) && Objects.equals(this.biometries, personRep.biometries);
 	}
 
 	@Override

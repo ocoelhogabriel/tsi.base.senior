@@ -109,7 +109,9 @@ public class ActiveDeviceOutputPendency {
 			return false;
 		}
 		ActiveDeviceOutputPendency activeDeviceOutputPendency = (ActiveDeviceOutputPendency) o;
-		return Objects.equals(this.pendencyId, activeDeviceOutputPendency.pendencyId) && Objects.equals(this.managerDeviceId, activeDeviceOutputPendency.managerDeviceId) && Objects.equals(this.deviceId, activeDeviceOutputPendency.deviceId)
+		return Objects.equals(this.pendencyId, activeDeviceOutputPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, activeDeviceOutputPendency.managerDeviceId)
+				&& Objects.equals(this.deviceId, activeDeviceOutputPendency.deviceId)
 				&& Objects.equals(this.activationTime, activeDeviceOutputPendency.activationTime);
 	}
 

@@ -101,7 +101,9 @@ public class BiometricTechnologyTemplatesList {
 			return false;
 		}
 		BiometricTechnologyTemplatesList biometricTechnologyTemplatesList = (BiometricTechnologyTemplatesList) o;
-		return Objects.equals(this.manufacturer, biometricTechnologyTemplatesList.manufacturer) && Objects.equals(this.biometrySecurityLevel, biometricTechnologyTemplatesList.biometrySecurityLevel) && Objects.equals(this.templates, biometricTechnologyTemplatesList.templates);
+		return Objects.equals(this.manufacturer, biometricTechnologyTemplatesList.manufacturer)
+				&& Objects.equals(this.biometrySecurityLevel, biometricTechnologyTemplatesList.biometrySecurityLevel)
+				&& Objects.equals(this.templates, biometricTechnologyTemplatesList.templates);
 	}
 
 	@Override

@@ -109,7 +109,9 @@ public class CollectEventStatus {
 			return false;
 		}
 		CollectEventStatus collectEventStatus = (CollectEventStatus) o;
-		return Objects.equals(this.pendencyId, collectEventStatus.pendencyId) && Objects.equals(this.managerDeviceId, collectEventStatus.managerDeviceId) && Objects.equals(this.accessEventCount, collectEventStatus.accessEventCount)
+		return Objects.equals(this.pendencyId, collectEventStatus.pendencyId)
+				&& Objects.equals(this.managerDeviceId, collectEventStatus.managerDeviceId)
+				&& Objects.equals(this.accessEventCount, collectEventStatus.accessEventCount)
 				&& Objects.equals(this.alarmEventCount, collectEventStatus.alarmEventCount);
 	}
 

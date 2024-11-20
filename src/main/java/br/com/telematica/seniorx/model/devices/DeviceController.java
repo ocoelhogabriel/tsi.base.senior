@@ -57,12 +57,14 @@ public class DeviceController {
 	 * @param newDevice O dispositivo a ser atualizado ou adicionado.
 	 */
 	private void updateOrAddDevice(DevicesCollection newDevice) {
-		devices.removeIf(device -> Objects.equals(device.getId(), newDevice.getId()) || device.getNetworkIdentification().equals(newDevice.getNetworkIdentification()));
+		devices.removeIf(device -> Objects.equals(device.getId(), newDevice.getId())
+				|| device.getNetworkIdentification().equals(newDevice.getNetworkIdentification()));
 		devices.add(newDevice);
 	}
 
 	private void updateOrAddDevice(ManagerDevice newDevice) {
-		logger.info("Atualizando dispositivo com ID: {} e IP: {}", newDevice.getId(), newDevice.getNetworkIdentification());
+		logger.info("Atualizando dispositivo com ID: {} e IP: {}", newDevice.getId(),
+				newDevice.getNetworkIdentification());
 
 		devices.removeIf(device -> Objects.equals(device.getId(), newDevice.getId()));
 
@@ -91,7 +93,10 @@ public class DeviceController {
 		device.setRepConfiguration(managerDevice.getRepConfiguration());
 		device.setExtensibleConfiguration(managerDevice.getExtensibleConfiguration());
 
-		Optional.ofNullable(managerDevice.getAreaId()).ifPresent(managerAreaId -> areaId.stream().filter(existingArea -> existingArea.getId().equals(managerAreaId)).findFirst().ifPresent(device::setAreaControl));
+		Optional.ofNullable(managerDevice.getAreaId())
+				.ifPresent(managerAreaId -> areaId.stream()
+						.filter(existingArea -> existingArea.getId().equals(managerAreaId)).findFirst()
+						.ifPresent(device::setAreaControl));
 
 		return device;
 	}
@@ -115,7 +120,10 @@ public class DeviceController {
 	 * @return Optional contendo o DevicesCollection, caso encontrado.
 	 */
 	public Optional<DevicesCollection> getDevicesCollection(Object identifier) {
-		return devices.stream().filter(d -> (identifier instanceof Long && d.getId() == (long) identifier) || (identifier instanceof String && d.getNetworkIdentification().equals(identifier))).findFirst();
+		return devices.stream()
+				.filter(d -> (identifier instanceof Long && d.getId() == (long) identifier)
+						|| (identifier instanceof String && d.getNetworkIdentification().equals(identifier)))
+				.findFirst();
 	}
 
 	/**
@@ -127,14 +135,21 @@ public class DeviceController {
 	}
 
 	public AreaControlList findAreaControlList(Object searchTerm) {
-		return areaId.stream().filter(area -> (searchTerm instanceof Long && area.getId() == (long) searchTerm)).findFirst().orElse(null);
+		return areaId.stream().filter(area -> (searchTerm instanceof Long && area.getId() == (long) searchTerm))
+				.findFirst().orElse(null);
 	}
 
 	private DevicesCollection refreshListDevice(Object searchTerm) {
-		DevicesCollection device = devices.stream().filter(d -> (searchTerm instanceof Long && d.getId() == (long) searchTerm) || (searchTerm instanceof String && d.getNetworkIdentification().equals(searchTerm))).findFirst().orElse(null);
+		DevicesCollection device = devices.stream()
+				.filter(d -> (searchTerm instanceof Long && d.getId() == (long) searchTerm)
+						|| (searchTerm instanceof String && d.getNetworkIdentification().equals(searchTerm)))
+				.findFirst().orElse(null);
 
 		if (device == null) {
-			device = devices.stream().filter(d -> (searchTerm instanceof Long && d.getId() == (long) searchTerm) || (searchTerm instanceof String && d.getNetworkIdentification().equals(searchTerm))).findFirst().orElse(null);
+			device = devices.stream()
+					.filter(d -> (searchTerm instanceof Long && d.getId() == (long) searchTerm)
+							|| (searchTerm instanceof String && d.getNetworkIdentification().equals(searchTerm)))
+					.findFirst().orElse(null);
 		}
 
 		return device;

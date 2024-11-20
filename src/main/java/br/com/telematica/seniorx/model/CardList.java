@@ -148,7 +148,10 @@ public class CardList {
 			return false;
 		}
 		CardList cardList = (CardList) o;
-		return Objects.equals(this.cardNumber, cardList.cardNumber) && Objects.equals(this.cardTechnology, cardList.cardTechnology) && Objects.equals(this.reader, cardList.reader) && Objects.equals(this.ownerType, cardList.ownerType) && Objects.equals(this.ownerId, cardList.ownerId);
+		return Objects.equals(this.cardNumber, cardList.cardNumber)
+				&& Objects.equals(this.cardTechnology, cardList.cardTechnology)
+				&& Objects.equals(this.reader, cardList.reader) && Objects.equals(this.ownerType, cardList.ownerType)
+				&& Objects.equals(this.ownerId, cardList.ownerId);
 	}
 
 	@Override

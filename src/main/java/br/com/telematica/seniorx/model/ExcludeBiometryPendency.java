@@ -119,7 +119,10 @@ public class ExcludeBiometryPendency {
 			return false;
 		}
 		ExcludeBiometryPendency excludeBiometryPendency = (ExcludeBiometryPendency) o;
-		return Objects.equals(this.pendencyId, excludeBiometryPendency.pendencyId) && Objects.equals(this.managerDeviceId, excludeBiometryPendency.managerDeviceId) && Objects.equals(this.personId, excludeBiometryPendency.personId) && Objects.equals(this.cardList, excludeBiometryPendency.cardList);
+		return Objects.equals(this.pendencyId, excludeBiometryPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, excludeBiometryPendency.managerDeviceId)
+				&& Objects.equals(this.personId, excludeBiometryPendency.personId)
+				&& Objects.equals(this.cardList, excludeBiometryPendency.cardList);
 	}
 
 	@Override

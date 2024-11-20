@@ -186,8 +186,13 @@ public class QRCodeAccessNotification {
 			return false;
 		}
 		QRCodeAccessNotification qrCodeAccessNotification = (QRCodeAccessNotification) o;
-		return Objects.equals(this.deviceId, qrCodeAccessNotification.deviceId) && Objects.equals(this.date, qrCodeAccessNotification.date) && Objects.equals(this.timezoneOffset, qrCodeAccessNotification.timezoneOffset) && Objects.equals(this.status, qrCodeAccessNotification.status)
-				&& Objects.equals(this.accessType, qrCodeAccessNotification.accessType) && Objects.equals(this.accessDirection, qrCodeAccessNotification.accessDirection) && Objects.equals(this.qrcode, qrCodeAccessNotification.qrcode);
+		return Objects.equals(this.deviceId, qrCodeAccessNotification.deviceId)
+				&& Objects.equals(this.date, qrCodeAccessNotification.date)
+				&& Objects.equals(this.timezoneOffset, qrCodeAccessNotification.timezoneOffset)
+				&& Objects.equals(this.status, qrCodeAccessNotification.status)
+				&& Objects.equals(this.accessType, qrCodeAccessNotification.accessType)
+				&& Objects.equals(this.accessDirection, qrCodeAccessNotification.accessDirection)
+				&& Objects.equals(this.qrcode, qrCodeAccessNotification.qrcode);
 	}
 
 	@Override

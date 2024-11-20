@@ -69,7 +69,8 @@ public class CardRep {
 			return false;
 		}
 		CardRep cardRep = (CardRep) o;
-		return Objects.equals(this.cardNumber, cardRep.cardNumber) && Objects.equals(this.cardTechnology, cardRep.cardTechnology);
+		return Objects.equals(this.cardNumber, cardRep.cardNumber)
+				&& Objects.equals(this.cardTechnology, cardRep.cardTechnology);
 	}
 
 	@Override

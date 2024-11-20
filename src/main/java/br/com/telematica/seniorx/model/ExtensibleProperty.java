@@ -87,7 +87,8 @@ public class ExtensibleProperty {
 			return false;
 		}
 		ExtensibleProperty extensibleProperty = (ExtensibleProperty) o;
-		return Objects.equals(this.id, extensibleProperty.id) && Objects.equals(this.key, extensibleProperty.key) && Objects.equals(this.value, extensibleProperty.value);
+		return Objects.equals(this.id, extensibleProperty.id) && Objects.equals(this.key, extensibleProperty.key)
+				&& Objects.equals(this.value, extensibleProperty.value);
 	}
 
 	@Override

@@ -192,8 +192,13 @@ public class IncludeCardPendency {
 			return false;
 		}
 		IncludeCardPendency includeCardPendency = (IncludeCardPendency) o;
-		return Objects.equals(this.pendencyId, includeCardPendency.pendencyId) && Objects.equals(this.managerDeviceId, includeCardPendency.managerDeviceId) && Objects.equals(this.cardNumber, includeCardPendency.cardNumber) && Objects.equals(this.cardTechnology, includeCardPendency.cardTechnology)
-				&& Objects.equals(this.readerIdList, includeCardPendency.readerIdList) && Objects.equals(this.ownerType, includeCardPendency.ownerType) && Objects.equals(this.ownerId, includeCardPendency.ownerId);
+		return Objects.equals(this.pendencyId, includeCardPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, includeCardPendency.managerDeviceId)
+				&& Objects.equals(this.cardNumber, includeCardPendency.cardNumber)
+				&& Objects.equals(this.cardTechnology, includeCardPendency.cardTechnology)
+				&& Objects.equals(this.readerIdList, includeCardPendency.readerIdList)
+				&& Objects.equals(this.ownerType, includeCardPendency.ownerType)
+				&& Objects.equals(this.ownerId, includeCardPendency.ownerId);
 	}
 
 	@Override

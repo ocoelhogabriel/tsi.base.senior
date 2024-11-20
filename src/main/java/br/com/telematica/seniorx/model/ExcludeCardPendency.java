@@ -87,7 +87,9 @@ public class ExcludeCardPendency {
 			return false;
 		}
 		ExcludeCardPendency excludeCardPendency = (ExcludeCardPendency) o;
-		return Objects.equals(this.pendencyId, excludeCardPendency.pendencyId) && Objects.equals(this.managerDeviceId, excludeCardPendency.managerDeviceId) && Objects.equals(this.card, excludeCardPendency.card);
+		return Objects.equals(this.pendencyId, excludeCardPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, excludeCardPendency.managerDeviceId)
+				&& Objects.equals(this.card, excludeCardPendency.card);
 	}
 
 	@Override

@@ -131,8 +131,11 @@ public class PersonAreaUpdatedPendency {
 			return false;
 		}
 		PersonAreaUpdatedPendency personAreaUpdatedPendency = (PersonAreaUpdatedPendency) o;
-		return Objects.equals(this.pendencyId, personAreaUpdatedPendency.pendencyId) && Objects.equals(this.managerDeviceId, personAreaUpdatedPendency.managerDeviceId) && Objects.equals(this.personId, personAreaUpdatedPendency.personId)
-				&& Objects.equals(this.cardNumber, personAreaUpdatedPendency.cardNumber) && Objects.equals(this.areaControl, personAreaUpdatedPendency.areaControl);
+		return Objects.equals(this.pendencyId, personAreaUpdatedPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, personAreaUpdatedPendency.managerDeviceId)
+				&& Objects.equals(this.personId, personAreaUpdatedPendency.personId)
+				&& Objects.equals(this.cardNumber, personAreaUpdatedPendency.cardNumber)
+				&& Objects.equals(this.areaControl, personAreaUpdatedPendency.areaControl);
 	}
 
 	@Override

@@ -97,7 +97,9 @@ public class ExtensibleConfiguration {
 			return false;
 		}
 		ExtensibleConfiguration extensibleConfiguration = (ExtensibleConfiguration) o;
-		return Objects.equals(this.id, extensibleConfiguration.id) && Objects.equals(this.name, extensibleConfiguration.name) && Objects.equals(this.extensiblePropertyList, extensibleConfiguration.extensiblePropertyList);
+		return Objects.equals(this.id, extensibleConfiguration.id)
+				&& Objects.equals(this.name, extensibleConfiguration.name)
+				&& Objects.equals(this.extensiblePropertyList, extensibleConfiguration.extensiblePropertyList);
 	}
 
 	@Override

@@ -88,7 +88,9 @@ public class ReaderActivation {
 			return false;
 		}
 		ReaderActivation readerActivation = (ReaderActivation) o;
-		return Objects.equals(this.actionEventType, readerActivation.actionEventType) && Objects.equals(this.outputId, readerActivation.outputId) && Objects.equals(this.activationTime, readerActivation.activationTime);
+		return Objects.equals(this.actionEventType, readerActivation.actionEventType)
+				&& Objects.equals(this.outputId, readerActivation.outputId)
+				&& Objects.equals(this.activationTime, readerActivation.activationTime);
 	}
 
 	@Override

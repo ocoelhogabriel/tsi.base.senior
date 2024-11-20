@@ -301,8 +301,12 @@ public class ModuleDevice {
 			return false;
 		}
 		ModuleDevice moduleDevice = (ModuleDevice) o;
-		return Objects.equals(this.id, moduleDevice.id) && Objects.equals(this.areaId, moduleDevice.areaId) && Objects.equals(this.deviceType, moduleDevice.deviceType) && Objects.equals(this.address, moduleDevice.address) && Objects.equals(this.portNumber, moduleDevice.portNumber)
-				&& Objects.equals(this.reader, moduleDevice.reader) && Objects.equals(this.output, moduleDevice.output) && Objects.equals(this.intput, moduleDevice.intput);
+		return Objects.equals(this.id, moduleDevice.id) && Objects.equals(this.areaId, moduleDevice.areaId)
+				&& Objects.equals(this.deviceType, moduleDevice.deviceType)
+				&& Objects.equals(this.address, moduleDevice.address)
+				&& Objects.equals(this.portNumber, moduleDevice.portNumber)
+				&& Objects.equals(this.reader, moduleDevice.reader) && Objects.equals(this.output, moduleDevice.output)
+				&& Objects.equals(this.intput, moduleDevice.intput);
 	}
 
 	@Override

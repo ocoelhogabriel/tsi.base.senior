@@ -218,7 +218,9 @@ public class Event {
 			return false;
 		}
 		Event event = (Event) o;
-		return Objects.equals(this.deviceId, event.deviceId) && Objects.equals(this.date, event.date) && Objects.equals(this.timezoneOffset, event.timezoneOffset) && Objects.equals(this.status, event.status) && Objects.equals(this.eventType, event.eventType);
+		return Objects.equals(this.deviceId, event.deviceId) && Objects.equals(this.date, event.date)
+				&& Objects.equals(this.timezoneOffset, event.timezoneOffset)
+				&& Objects.equals(this.status, event.status) && Objects.equals(this.eventType, event.eventType);
 	}
 
 	@Override

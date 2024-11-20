@@ -406,15 +406,24 @@ public class UpdatePersonREPPendency {
 			return false;
 		}
 		UpdatePersonREPPendency updatePersonREPPendency = (UpdatePersonREPPendency) o;
-		return Objects.equals(this.pendencyId, updatePersonREPPendency.pendencyId) && Objects.equals(this.managerDeviceId, updatePersonREPPendency.managerDeviceId) && Objects.equals(this.operationId, updatePersonREPPendency.operationId)
-				&& Objects.equals(this.cardNumber, updatePersonREPPendency.cardNumber) && Objects.equals(this.cardTechnology, updatePersonREPPendency.cardTechnology) && Objects.equals(this.personId, updatePersonREPPendency.personId)
-				&& Objects.equals(this.personName, updatePersonREPPendency.personName) && Objects.equals(this.pis, updatePersonREPPendency.pis) && Objects.equals(this.cpf, updatePersonREPPendency.cpf) && Objects.equals(this.biometricStatus, updatePersonREPPendency.biometricStatus)
-				&& Objects.equals(this.verifyBiometrics, updatePersonREPPendency.verifyBiometrics) && Objects.equals(this.biometry, updatePersonREPPendency.biometry);
+		return Objects.equals(this.pendencyId, updatePersonREPPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, updatePersonREPPendency.managerDeviceId)
+				&& Objects.equals(this.operationId, updatePersonREPPendency.operationId)
+				&& Objects.equals(this.cardNumber, updatePersonREPPendency.cardNumber)
+				&& Objects.equals(this.cardTechnology, updatePersonREPPendency.cardTechnology)
+				&& Objects.equals(this.personId, updatePersonREPPendency.personId)
+				&& Objects.equals(this.personName, updatePersonREPPendency.personName)
+				&& Objects.equals(this.pis, updatePersonREPPendency.pis)
+				&& Objects.equals(this.cpf, updatePersonREPPendency.cpf)
+				&& Objects.equals(this.biometricStatus, updatePersonREPPendency.biometricStatus)
+				&& Objects.equals(this.verifyBiometrics, updatePersonREPPendency.verifyBiometrics)
+				&& Objects.equals(this.biometry, updatePersonREPPendency.biometry);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(pendencyId, managerDeviceId, operationId, cardNumber, cardTechnology, personId, personName, pis, cpf, biometricStatus, verifyBiometrics, biometry);
+		return Objects.hash(pendencyId, managerDeviceId, operationId, cardNumber, cardTechnology, personId, personName,
+				pis, cpf, biometricStatus, verifyBiometrics, biometry);
 	}
 
 	@Override

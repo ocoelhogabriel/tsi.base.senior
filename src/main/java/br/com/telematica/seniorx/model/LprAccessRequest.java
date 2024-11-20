@@ -87,7 +87,9 @@ public class LprAccessRequest {
 			return false;
 		}
 		LprAccessRequest lprAccessRequest = (LprAccessRequest) o;
-		return Objects.equals(this.readerId, lprAccessRequest.readerId) && Objects.equals(this.licensePlate, lprAccessRequest.licensePlate) && Objects.equals(this.generateNotification, lprAccessRequest.generateNotification);
+		return Objects.equals(this.readerId, lprAccessRequest.readerId)
+				&& Objects.equals(this.licensePlate, lprAccessRequest.licensePlate)
+				&& Objects.equals(this.generateNotification, lprAccessRequest.generateNotification);
 	}
 
 	@Override

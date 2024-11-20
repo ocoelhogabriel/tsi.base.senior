@@ -87,7 +87,9 @@ public class DeactiveDeviceOutputPendency {
 			return false;
 		}
 		DeactiveDeviceOutputPendency deactiveDeviceOutputPendency = (DeactiveDeviceOutputPendency) o;
-		return Objects.equals(this.pendencyId, deactiveDeviceOutputPendency.pendencyId) && Objects.equals(this.managerDeviceId, deactiveDeviceOutputPendency.managerDeviceId) && Objects.equals(this.deviceId, deactiveDeviceOutputPendency.deviceId);
+		return Objects.equals(this.pendencyId, deactiveDeviceOutputPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, deactiveDeviceOutputPendency.managerDeviceId)
+				&& Objects.equals(this.deviceId, deactiveDeviceOutputPendency.deviceId);
 	}
 
 	@Override

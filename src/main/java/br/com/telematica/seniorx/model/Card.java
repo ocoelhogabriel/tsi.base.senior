@@ -282,14 +282,20 @@ public class Card {
 			return false;
 		}
 		Card card = (Card) o;
-		return Objects.equals(this.cardNumber, card.cardNumber) && Objects.equals(this.cardTechnology, card.cardTechnology) && Objects.equals(this.startValidity, card.startValidity) && Objects.equals(this.finishValidity, card.finishValidity)
-				&& Objects.equals(this.checkAntiPassback, card.checkAntiPassback) && Objects.equals(this.ownerType, card.ownerType) && Objects.equals(this.ownerId, card.ownerId) && Objects.equals(this.areaId, card.areaId) && Objects.equals(this.isVisitor, card.isVisitor)
+		return Objects.equals(this.cardNumber, card.cardNumber)
+				&& Objects.equals(this.cardTechnology, card.cardTechnology)
+				&& Objects.equals(this.startValidity, card.startValidity)
+				&& Objects.equals(this.finishValidity, card.finishValidity)
+				&& Objects.equals(this.checkAntiPassback, card.checkAntiPassback)
+				&& Objects.equals(this.ownerType, card.ownerType) && Objects.equals(this.ownerId, card.ownerId)
+				&& Objects.equals(this.areaId, card.areaId) && Objects.equals(this.isVisitor, card.isVisitor)
 				&& Objects.equals(this.isEscort, card.isEscort) && Objects.equals(this.accessLevel, card.accessLevel);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cardNumber, cardTechnology, startValidity, finishValidity, checkAntiPassback, ownerType, ownerId, areaId, isVisitor, isEscort, accessLevel);
+		return Objects.hash(cardNumber, cardTechnology, startValidity, finishValidity, checkAntiPassback, ownerType,
+				ownerId, areaId, isVisitor, isEscort, accessLevel);
 	}
 
 	@Override

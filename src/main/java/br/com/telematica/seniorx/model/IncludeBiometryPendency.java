@@ -141,7 +141,10 @@ public class IncludeBiometryPendency {
 			return false;
 		}
 		IncludeBiometryPendency includeBiometryPendency = (IncludeBiometryPendency) o;
-		return Objects.equals(this.pendencyId, includeBiometryPendency.pendencyId) && Objects.equals(this.managerDeviceId, includeBiometryPendency.managerDeviceId) && Objects.equals(this.personId, includeBiometryPendency.personId) && Objects.equals(this.cardList, includeBiometryPendency.cardList)
+		return Objects.equals(this.pendencyId, includeBiometryPendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, includeBiometryPendency.managerDeviceId)
+				&& Objects.equals(this.personId, includeBiometryPendency.personId)
+				&& Objects.equals(this.cardList, includeBiometryPendency.cardList)
 				&& Objects.equals(this.biometry, includeBiometryPendency.biometry);
 	}
 

@@ -355,16 +355,27 @@ public class AreaControlList {
 			return false;
 		}
 		AreaControlList areaControlList = (AreaControlList) o;
-		return Objects.equals(this.id, areaControlList.id) && Objects.equals(this.gmt, areaControlList.gmt) && Objects.equals(this.useDaylightSaving, areaControlList.useDaylightSaving) && Objects.equals(this.startDaylightSaving, areaControlList.startDaylightSaving)
-				&& Objects.equals(this.endDaylightSaving, areaControlList.endDaylightSaving) && Objects.equals(this.daylightSavingOffset, areaControlList.daylightSavingOffset) && Objects.equals(this.checkLevel, areaControlList.checkLevel)
-				&& Objects.equals(this.checkAntiPassback, areaControlList.checkAntiPassback) && Objects.equals(this.checkCapacity, areaControlList.checkCapacity) && Objects.equals(this.checkAccessCredit, areaControlList.checkAccessCredit)
-				&& Objects.equals(this.checkAccessLevel, areaControlList.checkAccessLevel) && Objects.equals(this.checkTimezoneLocation, areaControlList.checkTimezoneLocation) && Objects.equals(this.checkAccessLevelAuthorizer, areaControlList.checkAccessLevelAuthorizer)
-				&& Objects.equals(this.checkLocationAuthorizer, areaControlList.checkLocationAuthorizer) && Objects.equals(this.antiPassbackTime, areaControlList.antiPassbackTime);
+		return Objects.equals(this.id, areaControlList.id) && Objects.equals(this.gmt, areaControlList.gmt)
+				&& Objects.equals(this.useDaylightSaving, areaControlList.useDaylightSaving)
+				&& Objects.equals(this.startDaylightSaving, areaControlList.startDaylightSaving)
+				&& Objects.equals(this.endDaylightSaving, areaControlList.endDaylightSaving)
+				&& Objects.equals(this.daylightSavingOffset, areaControlList.daylightSavingOffset)
+				&& Objects.equals(this.checkLevel, areaControlList.checkLevel)
+				&& Objects.equals(this.checkAntiPassback, areaControlList.checkAntiPassback)
+				&& Objects.equals(this.checkCapacity, areaControlList.checkCapacity)
+				&& Objects.equals(this.checkAccessCredit, areaControlList.checkAccessCredit)
+				&& Objects.equals(this.checkAccessLevel, areaControlList.checkAccessLevel)
+				&& Objects.equals(this.checkTimezoneLocation, areaControlList.checkTimezoneLocation)
+				&& Objects.equals(this.checkAccessLevelAuthorizer, areaControlList.checkAccessLevelAuthorizer)
+				&& Objects.equals(this.checkLocationAuthorizer, areaControlList.checkLocationAuthorizer)
+				&& Objects.equals(this.antiPassbackTime, areaControlList.antiPassbackTime);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, gmt, useDaylightSaving, startDaylightSaving, endDaylightSaving, daylightSavingOffset, checkLevel, checkAntiPassback, checkCapacity, checkAccessCredit, checkAccessLevel, checkTimezoneLocation, checkAccessLevelAuthorizer, checkLocationAuthorizer, antiPassbackTime);
+		return Objects.hash(id, gmt, useDaylightSaving, startDaylightSaving, endDaylightSaving, daylightSavingOffset,
+				checkLevel, checkAntiPassback, checkCapacity, checkAccessCredit, checkAccessLevel,
+				checkTimezoneLocation, checkAccessLevelAuthorizer, checkLocationAuthorizer, antiPassbackTime);
 	}
 
 	@Override

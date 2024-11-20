@@ -271,14 +271,21 @@ public class PortConfiguration {
 			return false;
 		}
 		PortConfiguration portConfiguration = (PortConfiguration) o;
-		return Objects.equals(this.id, portConfiguration.id) && Objects.equals(this.portNumber, portConfiguration.portNumber) && Objects.equals(this.communicationMode, portConfiguration.communicationMode) && Objects.equals(this.txdDriverSettleDelay, portConfiguration.txdDriverSettleDelay)
-				&& Objects.equals(this.receiveDataValidDelay, portConfiguration.receiveDataValidDelay) && Objects.equals(this.interCharacterTimeout, portConfiguration.interCharacterTimeout) && Objects.equals(this.controllerReplyTimeout, portConfiguration.controllerReplyTimeout)
-				&& Objects.equals(this.pollTime, portConfiguration.pollTime) && Objects.equals(this.offlineDevicePollTime, portConfiguration.offlineDevicePollTime);
+		return Objects.equals(this.id, portConfiguration.id)
+				&& Objects.equals(this.portNumber, portConfiguration.portNumber)
+				&& Objects.equals(this.communicationMode, portConfiguration.communicationMode)
+				&& Objects.equals(this.txdDriverSettleDelay, portConfiguration.txdDriverSettleDelay)
+				&& Objects.equals(this.receiveDataValidDelay, portConfiguration.receiveDataValidDelay)
+				&& Objects.equals(this.interCharacterTimeout, portConfiguration.interCharacterTimeout)
+				&& Objects.equals(this.controllerReplyTimeout, portConfiguration.controllerReplyTimeout)
+				&& Objects.equals(this.pollTime, portConfiguration.pollTime)
+				&& Objects.equals(this.offlineDevicePollTime, portConfiguration.offlineDevicePollTime);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, portNumber, communicationMode, txdDriverSettleDelay, receiveDataValidDelay, interCharacterTimeout, controllerReplyTimeout, pollTime, offlineDevicePollTime);
+		return Objects.hash(id, portNumber, communicationMode, txdDriverSettleDelay, receiveDataValidDelay,
+				interCharacterTimeout, controllerReplyTimeout, pollTime, offlineDevicePollTime);
 	}
 
 	@Override

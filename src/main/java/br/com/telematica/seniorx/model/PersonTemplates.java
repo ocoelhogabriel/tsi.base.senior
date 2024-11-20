@@ -105,7 +105,9 @@ public class PersonTemplates {
 			return false;
 		}
 		PersonTemplates personTemplates = (PersonTemplates) o;
-		return Objects.equals(this.personId, personTemplates.personId) && Objects.equals(this.cardList, personTemplates.cardList) && Objects.equals(this.technologies, personTemplates.technologies);
+		return Objects.equals(this.personId, personTemplates.personId)
+				&& Objects.equals(this.cardList, personTemplates.cardList)
+				&& Objects.equals(this.technologies, personTemplates.technologies);
 	}
 
 	@Override

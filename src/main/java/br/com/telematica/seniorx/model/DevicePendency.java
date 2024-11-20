@@ -65,7 +65,8 @@ public class DevicePendency {
 			return false;
 		}
 		DevicePendency devicePendency = (DevicePendency) o;
-		return Objects.equals(this.pendencyId, devicePendency.pendencyId) && Objects.equals(this.managerDeviceId, devicePendency.managerDeviceId);
+		return Objects.equals(this.pendencyId, devicePendency.pendencyId)
+				&& Objects.equals(this.managerDeviceId, devicePendency.managerDeviceId);
 	}
 
 	@Override

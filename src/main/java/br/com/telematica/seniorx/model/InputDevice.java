@@ -267,13 +267,19 @@ public class InputDevice {
 			return false;
 		}
 		InputDevice inputDevice = (InputDevice) o;
-		return Objects.equals(this.id, inputDevice.id) && Objects.equals(this.areaId, inputDevice.areaId) && Objects.equals(this.address, inputDevice.address) && Objects.equals(this.defaultState, inputDevice.defaultState) && Objects.equals(this.activationDelay, inputDevice.activationDelay)
-				&& Objects.equals(this.masking, inputDevice.masking) && Objects.equals(this.activations, inputDevice.activations) && Objects.equals(this.extensibleConfiguration, inputDevice.extensibleConfiguration);
+		return Objects.equals(this.id, inputDevice.id) && Objects.equals(this.areaId, inputDevice.areaId)
+				&& Objects.equals(this.address, inputDevice.address)
+				&& Objects.equals(this.defaultState, inputDevice.defaultState)
+				&& Objects.equals(this.activationDelay, inputDevice.activationDelay)
+				&& Objects.equals(this.masking, inputDevice.masking)
+				&& Objects.equals(this.activations, inputDevice.activations)
+				&& Objects.equals(this.extensibleConfiguration, inputDevice.extensibleConfiguration);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, areaId, address, defaultState, activationDelay, masking, activations, extensibleConfiguration);
+		return Objects.hash(id, areaId, address, defaultState, activationDelay, masking, activations,
+				extensibleConfiguration);
 	}
 
 	@Override

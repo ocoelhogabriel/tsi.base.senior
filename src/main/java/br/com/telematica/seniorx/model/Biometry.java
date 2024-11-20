@@ -101,7 +101,9 @@ public class Biometry {
 			return false;
 		}
 		Biometry biometry = (Biometry) o;
-		return Objects.equals(this.manufacturer, biometry.manufacturer) && Objects.equals(this.biometrySecurityLevel, biometry.biometrySecurityLevel) && Objects.equals(this.templateList, biometry.templateList);
+		return Objects.equals(this.manufacturer, biometry.manufacturer)
+				&& Objects.equals(this.biometrySecurityLevel, biometry.biometrySecurityLevel)
+				&& Objects.equals(this.templateList, biometry.templateList);
 	}
 
 	@Override

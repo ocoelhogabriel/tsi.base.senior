@@ -183,7 +183,9 @@ public class OutputDevice {
 			return false;
 		}
 		OutputDevice outputDevice = (OutputDevice) o;
-		return Objects.equals(this.id, outputDevice.id) && Objects.equals(this.areaId, outputDevice.areaId) && Objects.equals(this.address, outputDevice.address) && Objects.equals(this.defaultState, outputDevice.defaultState)
+		return Objects.equals(this.id, outputDevice.id) && Objects.equals(this.areaId, outputDevice.areaId)
+				&& Objects.equals(this.address, outputDevice.address)
+				&& Objects.equals(this.defaultState, outputDevice.defaultState)
 				&& Objects.equals(this.extensibleConfiguration, outputDevice.extensibleConfiguration);
 	}
 

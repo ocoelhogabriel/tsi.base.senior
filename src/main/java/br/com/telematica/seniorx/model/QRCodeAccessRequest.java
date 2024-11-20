@@ -88,7 +88,9 @@ public class QRCodeAccessRequest {
 			return false;
 		}
 		QRCodeAccessRequest qrCodeAccessRequest = (QRCodeAccessRequest) o;
-		return Objects.equals(this.readerId, qrCodeAccessRequest.readerId) && Objects.equals(this.qrcode, qrCodeAccessRequest.qrcode) && Objects.equals(this.requestDateTime, qrCodeAccessRequest.requestDateTime);
+		return Objects.equals(this.readerId, qrCodeAccessRequest.readerId)
+				&& Objects.equals(this.qrcode, qrCodeAccessRequest.qrcode)
+				&& Objects.equals(this.requestDateTime, qrCodeAccessRequest.requestDateTime);
 	}
 
 	@Override

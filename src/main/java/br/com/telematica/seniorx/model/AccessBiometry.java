@@ -153,7 +153,10 @@ public class AccessBiometry {
 			return false;
 		}
 		AccessBiometry accessBiometry = (AccessBiometry) o;
-		return Objects.equals(this.manufacturer, accessBiometry.manufacturer) && Objects.equals(this.biometrySecurityLevel, accessBiometry.biometrySecurityLevel) && Objects.equals(this.templateList, accessBiometry.templateList) && Objects.equals(this.personId, accessBiometry.personId)
+		return Objects.equals(this.manufacturer, accessBiometry.manufacturer)
+				&& Objects.equals(this.biometrySecurityLevel, accessBiometry.biometrySecurityLevel)
+				&& Objects.equals(this.templateList, accessBiometry.templateList)
+				&& Objects.equals(this.personId, accessBiometry.personId)
 				&& Objects.equals(this.cardList, accessBiometry.cardList);
 	}
 

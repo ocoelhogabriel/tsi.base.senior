@@ -81,7 +81,8 @@ public class VehicleAccess {
 
 		public static class Adapter extends TypeAdapter<VehicleCredentialFormatEnum> {
 			@Override
-			public void write(final JsonWriter jsonWriter, final VehicleCredentialFormatEnum enumeration) throws IOException {
+			public void write(final JsonWriter jsonWriter, final VehicleCredentialFormatEnum enumeration)
+					throws IOException {
 				jsonWriter.value(enumeration.getValue());
 			}
 
@@ -137,7 +138,8 @@ public class VehicleAccess {
 
 		public static class Adapter extends TypeAdapter<PersonCredentialFormatEnum> {
 			@Override
-			public void write(final JsonWriter jsonWriter, final PersonCredentialFormatEnum enumeration) throws IOException {
+			public void write(final JsonWriter jsonWriter, final PersonCredentialFormatEnum enumeration)
+					throws IOException {
 				jsonWriter.value(enumeration.getValue());
 			}
 
@@ -395,14 +397,23 @@ public class VehicleAccess {
 			return false;
 		}
 		VehicleAccess vehicleAccess = (VehicleAccess) o;
-		return Objects.equals(this.deviceId, vehicleAccess.deviceId) && Objects.equals(this.date, vehicleAccess.date) && Objects.equals(this.timezoneOffset, vehicleAccess.timezoneOffset) && Objects.equals(this.status, vehicleAccess.status) && Objects.equals(this.accessType, vehicleAccess.accessType)
-				&& Objects.equals(this.accessDirection, vehicleAccess.accessDirection) && Objects.equals(this.vehicleCredentialFormat, vehicleAccess.vehicleCredentialFormat) && Objects.equals(this.licensePlate, vehicleAccess.licensePlate)
-				&& Objects.equals(this.vehicleCardId, vehicleAccess.vehicleCardId) && Objects.equals(this.personCredentialFormat, vehicleAccess.personCredentialFormat) && Objects.equals(this.personCardId, vehicleAccess.personCardId) && Objects.equals(this.personId, vehicleAccess.personId);
+		return Objects.equals(this.deviceId, vehicleAccess.deviceId) && Objects.equals(this.date, vehicleAccess.date)
+				&& Objects.equals(this.timezoneOffset, vehicleAccess.timezoneOffset)
+				&& Objects.equals(this.status, vehicleAccess.status)
+				&& Objects.equals(this.accessType, vehicleAccess.accessType)
+				&& Objects.equals(this.accessDirection, vehicleAccess.accessDirection)
+				&& Objects.equals(this.vehicleCredentialFormat, vehicleAccess.vehicleCredentialFormat)
+				&& Objects.equals(this.licensePlate, vehicleAccess.licensePlate)
+				&& Objects.equals(this.vehicleCardId, vehicleAccess.vehicleCardId)
+				&& Objects.equals(this.personCredentialFormat, vehicleAccess.personCredentialFormat)
+				&& Objects.equals(this.personCardId, vehicleAccess.personCardId)
+				&& Objects.equals(this.personId, vehicleAccess.personId);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(deviceId, date, timezoneOffset, status, accessType, accessDirection, vehicleCredentialFormat, licensePlate, vehicleCardId, personCredentialFormat, personCardId, personId);
+		return Objects.hash(deviceId, date, timezoneOffset, status, accessType, accessDirection,
+				vehicleCredentialFormat, licensePlate, vehicleCardId, personCredentialFormat, personCardId, personId);
 	}
 
 	@Override

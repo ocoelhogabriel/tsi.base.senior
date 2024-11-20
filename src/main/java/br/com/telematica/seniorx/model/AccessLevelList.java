@@ -75,7 +75,8 @@ public class AccessLevelList {
 			return false;
 		}
 		AccessLevelList accessLevelList = (AccessLevelList) o;
-		return Objects.equals(this.id, accessLevelList.id) && Objects.equals(this.readerAndTimezoneList, accessLevelList.readerAndTimezoneList);
+		return Objects.equals(this.id, accessLevelList.id)
+				&& Objects.equals(this.readerAndTimezoneList, accessLevelList.readerAndTimezoneList);
 	}
 
 	@Override

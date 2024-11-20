@@ -51,7 +51,8 @@ public class SeniorXHandlerService extends SeniorXService {
 			List<ManagerDevice> managerDevice = iApisController.getDevice().getBody();
 			List<AreaControlList> areaControlResponse = iApisController.getAreaControl().getBody();
 
-			if ((managerDevice != null && !managerDevice.isEmpty()) || (areaControlResponse != null && !areaControlResponse.isEmpty())) {
+			if ((managerDevice != null && !managerDevice.isEmpty())
+					|| (areaControlResponse != null && !areaControlResponse.isEmpty())) {
 				deviceController.onAreaUpdate(areaControlResponse);
 				deviceController.onDeviceUpdateManagerDevice(managerDevice);
 
@@ -76,9 +77,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			logger.info("Device Address: {}", device.getNetworkIdentification());
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<DevicePendency> dateTimePendencies = Optional.ofNullable(pendencies).map(AllPendency::getDeviceDateTime).orElse(Collections.emptyList());
+			List<DevicePendency> dateTimePendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getDeviceDateTime).orElse(Collections.emptyList());
 
-			handlePendency(dateTimePendencies, pendency -> processDateTimePendency(device, pendency), "Handle Device DateTime");
+			handlePendency(dateTimePendencies, pendency -> processDateTimePendency(device, pendency),
+					"Handle Device DateTime");
 
 		} catch (Exception e) {
 			logger.error("Handle Device DateTime - Error processing: {}", e.getMessage(), e);
@@ -119,7 +122,8 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<DevicePendency> statusPendencies = Optional.ofNullable(pendencies).map(AllPendency::getDeviceStatus).orElse(Collections.emptyList());
+			List<DevicePendency> statusPendencies = Optional.ofNullable(pendencies).map(AllPendency::getDeviceStatus)
+					.orElse(Collections.emptyList());
 
 			handlePendency(statusPendencies, pendency -> processDeviceStatus(device, pendency), "Handle Device Status");
 		} catch (Exception e) {
@@ -148,7 +152,8 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<DeviceUpdatedPendency> devicePendencies = Optional.ofNullable(pendencies).map(AllPendency::getDevice).orElse(Collections.emptyList());
+			List<DeviceUpdatedPendency> devicePendencies = Optional.ofNullable(pendencies).map(AllPendency::getDevice)
+					.orElse(Collections.emptyList());
 
 			handlePendency(devicePendencies, pendency -> processDevice(device, pendency), "Handle Device");
 		} catch (Exception e) {
@@ -180,9 +185,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<SetDeviceEmergencyPendency> emergencyPendencies = Optional.ofNullable(pendencies).map(AllPendency::getSetDeviceEmergency).orElse(Collections.emptyList());
+			List<SetDeviceEmergencyPendency> emergencyPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getSetDeviceEmergency).orElse(Collections.emptyList());
 
-			handlePendency(emergencyPendencies, pendency -> processSetDeviceEmergency(device, pendency), "Handle Device Set Emergency");
+			handlePendency(emergencyPendencies, pendency -> processSetDeviceEmergency(device, pendency),
+					"Handle Device Set Emergency");
 		} catch (Exception e) {
 			logger.error("Handle Device Set Emergency - Error processing: {}", e.getMessage(), e);
 		}
@@ -209,9 +216,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<UnsetDeviceEmergencyPendency> unsetEmergencyPendencies = Optional.ofNullable(pendencies).map(AllPendency::getUnsetDeviceEmergency).orElse(Collections.emptyList());
+			List<UnsetDeviceEmergencyPendency> unsetEmergencyPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getUnsetDeviceEmergency).orElse(Collections.emptyList());
 
-			handlePendency(unsetEmergencyPendencies, pendency -> processUnsetDeviceEmergency(device, pendency), "Handle Device Unset Emergency");
+			handlePendency(unsetEmergencyPendencies, pendency -> processUnsetDeviceEmergency(device, pendency),
+					"Handle Device Unset Emergency");
 		} catch (Exception e) {
 			logger.error("Handle Device Unset Emergency - Error processing: {}", e.getMessage(), e);
 		}
@@ -238,9 +247,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<DevicePendency> cardListPendencies = Optional.ofNullable(pendencies).map(AllPendency::getLoadAllowCardList).orElse(Collections.emptyList());
+			List<DevicePendency> cardListPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getLoadAllowCardList).orElse(Collections.emptyList());
 
-			handlePendency(cardListPendencies, pendency -> processAllowCardList(device, pendency), "Handle Allow Card List");
+			handlePendency(cardListPendencies, pendency -> processAllowCardList(device, pendency),
+					"Handle Allow Card List");
 		} catch (Exception e) {
 			logger.error("Handle Allow Card List - Error processing: {}", e.getMessage(), e);
 		}
@@ -263,17 +274,22 @@ public class SeniorXHandlerService extends SeniorXService {
 		try {
 			logger.info("Handle Device Remove Allow Card List - Message Remove Allow Card: " + message);
 
-			AllPendency allPendencyBody = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			DevicesCollection deviceCollection = deviceController.findDevicesByIdOrIp(Long.valueOf(message.getDeviceId()));
+			AllPendency allPendencyBody = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId()))
+					.getBody();
+			DevicesCollection deviceCollection = deviceController
+					.findDevicesByIdOrIp(Long.valueOf(message.getDeviceId()));
 
 			if (deviceCollection != null && allPendencyBody != null) {
-				logger.info("Handle Device Remove Allow Card List - Device Address: " + deviceCollection.getNetworkIdentification());
+				logger.info("Handle Device Remove Allow Card List - Device Address: "
+						+ deviceCollection.getNetworkIdentification());
 				List<DevicePendency> devicePendencyRemoveAllowCardList = allPendencyBody.getRemoveAllowCardList();
 
 				if (!devicePendencyRemoveAllowCardList.isEmpty()) {
 					for (DevicePendency pendencyRemoveAllowCardList : devicePendencyRemoveAllowCardList) {
 						if (PendencyQueue.searchKey(pendencyRemoveAllowCardList.getPendencyId()) != null) {
-							logger.info("Handle Device Remove Allow Card List - Pending completed, awaiting device return!" + PendencyQueue.searchKey(pendencyRemoveAllowCardList.getPendencyId()));
+							logger.info(
+									"Handle Device Remove Allow Card List - Pending completed, awaiting device return!"
+											+ PendencyQueue.searchKey(pendencyRemoveAllowCardList.getPendencyId()));
 						} else {
 							logger.info("pendencyRemoveAllowCardList");
 							successPendency(pendencyRemoveAllowCardList.getPendencyId());
@@ -299,9 +315,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<IncludeCardPendency> includeCardPendencies = Optional.ofNullable(pendencies).map(AllPendency::getIncludeCard).orElse(Collections.emptyList());
+			List<IncludeCardPendency> includeCardPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getIncludeCard).orElse(Collections.emptyList());
 
-			handlePendency(includeCardPendencies, pendency -> processIncludeCard(device, pendency), "Handle Include Card");
+			handlePendency(includeCardPendencies, pendency -> processIncludeCard(device, pendency),
+					"Handle Include Card");
 		} catch (Exception e) {
 			logger.error("Handle Include Card - Error processing: {}", e.getMessage(), e);
 		}
@@ -327,9 +345,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<ExcludeCardPendency> excludeCardPendencies = Optional.ofNullable(pendencies).map(AllPendency::getExcludeCard).orElse(Collections.emptyList());
+			List<ExcludeCardPendency> excludeCardPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getExcludeCard).orElse(Collections.emptyList());
 
-			handlePendency(excludeCardPendencies, pendency -> processExcludeCard(device, pendency), "Handle Exclude Card");
+			handlePendency(excludeCardPendencies, pendency -> processExcludeCard(device, pendency),
+					"Handle Exclude Card");
 		} catch (Exception e) {
 			logger.error("Handle Exclude Card - Error processing: {}", e.getMessage(), e);
 		}
@@ -355,9 +375,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<DevicePendency> biometryPendencies = Optional.ofNullable(pendencies).map(AllPendency::getLoadBiometryList).orElse(Collections.emptyList());
+			List<DevicePendency> biometryPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getLoadBiometryList).orElse(Collections.emptyList());
 
-			handlePendency(biometryPendencies, pendency -> processAllowBiometryList(device, pendency), "Handle Allow Biometry List");
+			handlePendency(biometryPendencies, pendency -> processAllowBiometryList(device, pendency),
+					"Handle Allow Biometry List");
 		} catch (Exception e) {
 			logger.error("Handle Allow Biometry List - Error processing: {}", e.getMessage(), e);
 		}
@@ -379,8 +401,10 @@ public class SeniorXHandlerService extends SeniorXService {
 
 			List<IncludeBiometryPendency> devicePendencyAllowBiometryList = new ArrayList<>();
 
-			AllPendency allPendencyBody = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			DevicesCollection deviceCollection = deviceController.findDevicesByIdOrIp(Long.valueOf(message.getDeviceId()));
+			AllPendency allPendencyBody = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId()))
+					.getBody();
+			DevicesCollection deviceCollection = deviceController
+					.findDevicesByIdOrIp(Long.valueOf(message.getDeviceId()));
 
 			if (deviceCollection != null && allPendencyBody != null) {
 				logger.info("Handle Include Biometry - Device Address: " + deviceCollection.getNetworkIdentification());
@@ -402,7 +426,8 @@ public class SeniorXHandlerService extends SeniorXService {
 			if (!devicePendencyAllowBiometryList.isEmpty()) {
 				for (IncludeBiometryPendency pendencyIncludeBiometry : devicePendencyAllowBiometryList) {
 
-					logger.info("Handle Include Biometry - check pendency: " + PendencyQueue.searchKey(pendencyIncludeBiometry.getPendencyId()));
+					logger.info("Handle Include Biometry - check pendency: "
+							+ PendencyQueue.searchKey(pendencyIncludeBiometry.getPendencyId()));
 					if (PendencyQueue.searchKey(pendencyIncludeBiometry.getPendencyId()) != null) {
 						logger.info("Handle Include Biometry - Pending completed, awaiting device return!");
 					} else {
@@ -431,9 +456,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<DevicePendency> removeBiometryPendencies = Optional.ofNullable(pendencies).map(AllPendency::getRemoveBiometryList).orElse(Collections.emptyList());
+			List<DevicePendency> removeBiometryPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getRemoveBiometryList).orElse(Collections.emptyList());
 
-			handlePendency(removeBiometryPendencies, pendency -> processRemoveBiometryList(device, pendency), "Handle Remove Biometry List");
+			handlePendency(removeBiometryPendencies, pendency -> processRemoveBiometryList(device, pendency),
+					"Handle Remove Biometry List");
 		} catch (Exception e) {
 			logger.error("Handle Remove Biometry List - Error processing: {}", e.getMessage(), e);
 		}
@@ -459,9 +486,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<ExcludeBiometryPendency> excludeBiometryPendencies = Optional.ofNullable(pendencies).map(AllPendency::getExcludeBiometry).orElse(Collections.emptyList());
+			List<ExcludeBiometryPendency> excludeBiometryPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getExcludeBiometry).orElse(Collections.emptyList());
 
-			handlePendency(excludeBiometryPendencies, pendency -> processExcludeBiometry(device, pendency), "Handle Exclude Biometry");
+			handlePendency(excludeBiometryPendencies, pendency -> processExcludeBiometry(device, pendency),
+					"Handle Exclude Biometry");
 		} catch (Exception e) {
 			logger.error("Handle Exclude Biometry - Error processing: {}", e.getMessage(), e);
 		}
@@ -487,9 +516,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<UpdatePersonREPPendency> updateRepPendencies = Optional.ofNullable(pendencies).map(AllPendency::getUpdatePersonREP).orElse(Collections.emptyList());
+			List<UpdatePersonREPPendency> updateRepPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getUpdatePersonREP).orElse(Collections.emptyList());
 
-			handlePendency(updateRepPendencies, pendency -> processUpdateRepPerson(pendency), "Handle Update Rep Person");
+			handlePendency(updateRepPendencies, pendency -> processUpdateRepPerson(pendency),
+					"Handle Update Rep Person");
 		} catch (Exception e) {
 			logger.error("Handle Update Rep Person - Error processing: {}", e.getMessage(), e);
 		}
@@ -524,9 +555,11 @@ public class SeniorXHandlerService extends SeniorXService {
 			}
 
 			AllPendency pendencies = iApisController.getPendencyIdDevice(Long.valueOf(message.getDeviceId())).getBody();
-			List<ManufacturerUpdatedPendency> manufacturerPendencies = Optional.ofNullable(pendencies).map(AllPendency::getManufacturerUpdated).orElse(Collections.emptyList());
+			List<ManufacturerUpdatedPendency> manufacturerPendencies = Optional.ofNullable(pendencies)
+					.map(AllPendency::getManufacturerUpdated).orElse(Collections.emptyList());
 
-			handlePendency(manufacturerPendencies, pendency -> processManufacturerRep(device, pendency), "Handle Manufacturer Rep");
+			handlePendency(manufacturerPendencies, pendency -> processManufacturerRep(device, pendency),
+					"Handle Manufacturer Rep");
 		} catch (Exception e) {
 			logger.error("Handle Manufacturer Rep - Error processing: {}", e.getMessage(), e);
 		}
