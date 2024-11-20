@@ -81,7 +81,7 @@ public interface IApisController {
 
 	ResponseEntity<AllPendency> getPendencyIdDevice(Long id);
 
-	ResponseEntity<Object> updatePendency(PendencyUpdated model);
+	ResponseEntity<Object> updatePendency(List<PendencyUpdated> model);
 
 	ResponseEntity<Object> successPendency(PendencyExecuted model);
 

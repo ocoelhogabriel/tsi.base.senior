@@ -1,5 +1,7 @@
 package br.com.telematica.seniorx.apis.abst;
 
+import java.util.List;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -30,8 +32,8 @@ public abstract class ApisPendencyController extends ApisControllerAbstract impl
 	}
 
 	@Override
-	public ResponseEntity<Object> updatePendency(PendencyUpdated model) {
-		HttpEntity<PendencyUpdated> entity = new HttpEntity<>(createHeaders());
+	public ResponseEntity<Object> updatePendency(List<PendencyUpdated> model) {
+		HttpEntity<List<PendencyUpdated>> entity = new HttpEntity<>(model, createHeaders());
 		return restTemplate.exchange(baseUrl + "/pendency/update", HttpMethod.POST, entity, Object.class);
 	}
 
