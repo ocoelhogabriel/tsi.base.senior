@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
 
-import br.com.telematica.seniorx.apis.IApisController;
 import br.com.telematica.seniorx.model.ActiveDeviceOutputPendency;
 import br.com.telematica.seniorx.model.AllPendency;
 import br.com.telematica.seniorx.model.BlockDevicePendency;
@@ -24,7 +23,6 @@ import br.com.telematica.seniorx.model.LoadHolidayListPendency;
 import br.com.telematica.seniorx.model.OperationEnum;
 import br.com.telematica.seniorx.model.PersonAreaUpdatedPendency;
 import br.com.telematica.seniorx.model.UnblockDevicePendency;
-import br.com.telematica.seniorx.model.devices.DeviceController;
 import br.com.telematica.seniorx.service.SeniorXService;
 import br.com.telematica.seniorx.websocket.model.MessageTypeWebSocketEnum;
 import br.com.telematica.seniorx.websocket.model.WebSocketModelResponse;
@@ -34,8 +32,8 @@ public class WebSocketManager extends SeniorXService {
 
 	private static final Logger logger = LoggerFactory.getLogger(WebSocketManager.class);
 
-	public WebSocketManager(IApisController iApisController, DeviceController deviceController) {
-		super(iApisController, deviceController);
+	public WebSocketManager() {
+		super();
 		Thread.currentThread().setName("WebSocket Manager");
 	}
 

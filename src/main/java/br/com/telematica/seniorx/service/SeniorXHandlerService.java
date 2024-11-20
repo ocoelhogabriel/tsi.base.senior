@@ -8,8 +8,8 @@ import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
-import br.com.telematica.seniorx.apis.IApisController;
 import br.com.telematica.seniorx.model.AllPendency;
 import br.com.telematica.seniorx.model.AreaControlList;
 import br.com.telematica.seniorx.model.DevicePendency;
@@ -25,18 +25,18 @@ import br.com.telematica.seniorx.model.OperationEnum;
 import br.com.telematica.seniorx.model.SetDeviceEmergencyPendency;
 import br.com.telematica.seniorx.model.UnsetDeviceEmergencyPendency;
 import br.com.telematica.seniorx.model.UpdatePersonREPPendency;
-import br.com.telematica.seniorx.model.devices.DeviceController;
 import br.com.telematica.seniorx.model.devices.DevicesCollection;
 import br.com.telematica.seniorx.websocket.model.WebSocketModelResponse;
 import br.com.telematica.util.Utils;
 import jakarta.annotation.PostConstruct;
 
+@Component
 public class SeniorXHandlerService extends SeniorXService {
 
 	private static final Logger logger = LoggerFactory.getLogger(SeniorXHandlerService.class);
 
-	public SeniorXHandlerService(IApisController iApisController, DeviceController deviceController) {
-		super(iApisController, deviceController);
+	public SeniorXHandlerService() {
+		super();
 	}
 
 	@PostConstruct

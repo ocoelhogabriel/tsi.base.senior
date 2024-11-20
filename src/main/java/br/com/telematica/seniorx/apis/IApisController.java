@@ -3,6 +3,7 @@ package br.com.telematica.seniorx.apis;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import br.com.telematica.seniorx.model.Access;
 import br.com.telematica.seniorx.model.AccessRequest;
@@ -32,12 +33,11 @@ import br.com.telematica.seniorx.model.ValidationResponse;
 import br.com.telematica.seniorx.model.VehicleAccess;
 import br.com.telematica.seniorx.model.VehicleAccessRequest;
 
+@Service
 public interface IApisController {
 	ResponseEntity<List<ManagerDevice>> getDevice();
 
 	ResponseEntity<Object> getDeviceStatus();
-
-	ResponseEntity<Object> updateDeviceBiometry();
 
 	ResponseEntity<Object> getPersonInfo();
 

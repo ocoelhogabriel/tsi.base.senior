@@ -1,35 +1,28 @@
 package br.com.telematica.seniorx.apis;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
-public abstract class ApisControllerAbstract {
+public abstract class ApisControllerAbstract implements IApisController {
 
-	@Value("${partner_key}")
-	private String partner;
-	@Value("${driver_key}")
-	private String driver;
-	@Value("${api.sdk.senior}")
-	private String url;
-
-	protected final RestTemplate restTemplate;
+	protected final String partner;
+	protected final String driver;
 	protected final String baseUrl;
 
-	protected ApisControllerAbstract(RestTemplate restTemplate, String baseUrl) {
-		super();
-		this.restTemplate = restTemplate;
-		this.baseUrl = url;
+	protected ApisControllerAbstract(String baseUrl, String partner, String driver) {
+		this.partner = partner;
+		this.driver = driver;
+		this.baseUrl = baseUrl;
 	}
 
 	protected HttpHeaders createHeaders() {
-		try {
-			HttpHeaders headers = new HttpHeaders();
-			headers.add("partner_key", partner);
-			headers.add("driver_key", driver);
-			return headers;
-		} catch (Exception e) {
-			return HttpHeaders.EMPTY;
-		}
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("partner_key", partner);
+		headers.add("driver_key", driver);
+		return headers;
+	}
+
+	protected RestTemplate rest() {
+		return new RestTemplate();
 	}
 }

@@ -6,7 +6,9 @@ import java.util.function.Consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
 import br.com.telematica.seniorx.apis.IApisController;
 import br.com.telematica.seniorx.model.OperationEnum;
@@ -14,16 +16,17 @@ import br.com.telematica.seniorx.model.PendencyExecuted;
 import br.com.telematica.seniorx.model.PendencyUpdated;
 import br.com.telematica.seniorx.model.devices.DeviceController;
 
+@Component
 public abstract class SeniorXService {
 
 	protected static final Logger logger = LoggerFactory.getLogger(SeniorXService.class);
 
-	protected final DeviceController deviceController;
-	protected final IApisController iApisController;
+	@Autowired
+	protected DeviceController deviceController;
+	@Autowired
+	protected IApisController iApisController;
 
-	protected SeniorXService(IApisController iApisController, DeviceController deviceController) {
-		this.iApisController = iApisController;
-		this.deviceController = deviceController;
+	protected SeniorXService() {
 	}
 
 	protected <T> void handlePendency(List<T> pendencies, Consumer<T> action, String logMessage) {
