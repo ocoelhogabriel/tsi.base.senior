@@ -157,4 +157,37 @@ public class DevicesCollection {
 		this.extensibleConfiguration = extensibleConfiguration;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("DevicesCollection [id=");
+		builder.append(id);
+		builder.append(", areaControl=");
+		builder.append(areaControl);
+		builder.append(", networkIdentification=");
+		builder.append(networkIdentification);
+//		builder.append(", networkPort=");
+//		builder.append(networkPort);
+//		builder.append(", displayMessage=");
+//		builder.append(displayMessage);
+//		builder.append(", numberOfCardRecords=");
+//		builder.append(numberOfCardRecords);
+//		builder.append(", turnstileBypassTime=");
+//		builder.append(turnstileBypassTime);
+//		builder.append(", module=");
+//		builder.append(module);
+		builder.append(", reader=");
+		builder.append(reader);
+//		builder.append(", accessMessage=");
+//		builder.append(accessMessage);
+//		builder.append(", portConfiguration=");
+//		builder.append(portConfiguration);
+		builder.append(", repConfiguration=");
+		builder.append(repConfiguration);
+		builder.append(", extensibleConfiguration=");
+		builder.append(extensibleConfiguration);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }

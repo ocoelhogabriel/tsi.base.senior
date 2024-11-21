@@ -592,14 +592,14 @@ public class ManagerDevice {
 		sb.append("    turnstileBypassTime: ").append(toIndentedString(turnstileBypassTime)).append("\n");
 		sb.append("    module: ").append(toIndentedString(module)).append("\n");
 		sb.append("    reader: ").append(toIndentedString(reader)).append("\n");
-		sb.append("    output: ").append(toIndentedString(output)).append("\n");
-		sb.append("    intput: ").append(toIndentedString(intput)).append("\n");
-		sb.append("    accessMessage: ").append(toIndentedString(accessMessage)).append("\n");
+//		sb.append("    output: ").append(toIndentedString(output)).append("\n");
+//		sb.append("    intput: ").append(toIndentedString(intput)).append("\n");
+//		sb.append("    accessMessage: ").append(toIndentedString(accessMessage)).append("\n");
 		sb.append("    portConfiguration: ").append(toIndentedString(portConfiguration)).append("\n");
 		sb.append("    repConfiguration: ").append(toIndentedString(repConfiguration)).append("\n");
 		sb.append("    extensibleConfiguration: ").append(toIndentedString(extensibleConfiguration)).append("\n");
-		sb.append("    username: ").append(toIndentedString(username)).append("\n");
-		sb.append("    password: ").append(toIndentedString(password)).append("\n");
+//		sb.append("    username: ").append(toIndentedString(username)).append("\n");
+//		sb.append("    password: ").append(toIndentedString(password)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

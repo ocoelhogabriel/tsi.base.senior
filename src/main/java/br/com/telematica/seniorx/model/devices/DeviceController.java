@@ -71,7 +71,8 @@ public class DeviceController {
 		DevicesCollection deviceToAdd = convertToDevicesCollection(newDevice);
 		devices.add(deviceToAdd);
 
-		logger.info("Dispositivo adicionado ou atualizado: {}", deviceToAdd);
+		logger.info("Dispositivo adicionado ou atualizado: {} - ", deviceToAdd.getId(),
+				deviceToAdd.getNetworkIdentification());
 	}
 
 	/**
@@ -140,19 +141,28 @@ public class DeviceController {
 	}
 
 	private DevicesCollection refreshListDevice(Object searchTerm) {
-		DevicesCollection device = devices.stream()
-				.filter(d -> (searchTerm instanceof Long && d.getId() == (long) searchTerm)
-						|| (searchTerm instanceof String && d.getNetworkIdentification().equals(searchTerm)))
-				.findFirst().orElse(null);
 
-		if (device == null) {
-			device = devices.stream()
-					.filter(d -> (searchTerm instanceof Long && d.getId() == (long) searchTerm)
-							|| (searchTerm instanceof String && d.getNetworkIdentification().equals(searchTerm)))
-					.findFirst().orElse(null);
+		if (searchTerm == null) {
+			logger.warn("Search term is null.");
+			return null;
 		}
 
-		return device;
+		if (isNumeric(searchTerm.toString())) {
+			Long id = Long.valueOf(searchTerm.toString());
+			return devices.stream().filter(d -> Objects.equals(d.getId(), id)).findFirst().orElse(null);
+		}
+
+		return devices.stream().filter(d -> searchTerm.toString().equals(d.getNetworkIdentification())).findFirst()
+				.orElse(null);
+	}
+
+	private boolean isNumeric(String str) {
+		try {
+			Long.parseLong(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
 	}
 
 }
