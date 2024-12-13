@@ -13,15 +13,15 @@ import br.com.telematica.seniorx.apis.abst.ApisControllerImpl;
 
 @Configuration
 public class PackegeConfig {
-
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.setConnectTimeout(Duration.ofSeconds(5)).setReadTimeout(Duration.ofSeconds(5)).build();
-	}
-
-	@Bean
-	public IApisController apisController(@Value("${api.sdk.senior}") String baseUrl,
-			@Value("${partner_key}") String partner, @Value("${driver_key}") String driver) {
-		return new ApisControllerImpl(baseUrl, partner, driver);
-	}
+    
+    @Bean
+    RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.setConnectTimeout(Duration.ofSeconds(5)).setReadTimeout(Duration.ofSeconds(5)).build();
+    }
+    
+    @Bean
+    IApisController apisController(@Value("${api.sdk.senior}") String baseUrl, @Value("${partner_key}") String partner, @Value("${driver_key}") String driver) {
+        return new ApisControllerImpl(baseUrl, partner, driver);
+    }
+    
 }

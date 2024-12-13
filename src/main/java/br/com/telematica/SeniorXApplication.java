@@ -4,8 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "br.com.telematica.seniorx")
-public class Application {
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+public class SeniorXApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SeniorXApplication.class, args);
+    }
+    
 }

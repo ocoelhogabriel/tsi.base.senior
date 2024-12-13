@@ -35,84 +35,84 @@ import br.com.telematica.seniorx.model.VehicleAccessRequest;
 
 @Service
 public interface IApisController {
-	ResponseEntity<List<ManagerDevice>> getDevice();
-
-	ResponseEntity<Object> getDeviceStatus();
-
-	ResponseEntity<Object> getPersonInfo();
-
-	ResponseEntity<List<AreaControlList>> getAreaControl();
-
-	ResponseEntity<ManagerDevice> getDeviceId(Long id);
-
-	ResponseEntity<Object> getBiometry();
-
-	ResponseEntity<Object> getCardFormat();
-
-	ResponseEntity<Object> getAccessLevel();
-
-	ResponseEntity<Object> getHolyday();
-
-	ResponseEntity<Object> getTimezone();
-
-	ResponseEntity<Object> getDeviceIdCard(Long id);
-
-	ResponseEntity<Object> getDeviceIdAccessCard(Long id);
-
-	ResponseEntity<Object> getDeviceIdAccessBiometry(Long id);
-
-	ResponseEntity<Object> getDeviceIdRepCredential(Long id);
-
-	ResponseEntity<Object> getDeviceIdAccessPhoto(Long id);
-
-	ResponseEntity<Object> createIncludeBiometry(IncludeBiometry model);
-
-	ResponseEntity<PersonValidationResponse> createAccessRequest(AccessRequest model);
-
-	ResponseEntity<ValidationResponse> createVehicleAccessRequest(VehicleAccessRequest model);
-
-	ResponseEntity<PersonValidationResponse> createQRCodeAccessRequest(QRCodeAccessRequest model);
-
-	ResponseEntity<PersonValidationResponse> createCollectEventStatus(CollectEventStatus model);
-
-	ResponseEntity<PersonValidationResponse> createCollectEventStatus(DeviceInputStatus model);
-
-	ResponseEntity<AllPendency> getPendency();
-
-	ResponseEntity<AllPendency> getPendencyIdDevice(Long id);
-
-	ResponseEntity<Object> updatePendency(List<PendencyUpdated> model);
-
-	ResponseEntity<Object> successPendency(PendencyExecuted model);
-
-	ResponseEntity<Object> createDeviceStatus(DeviceStatus model);
-
-	ResponseEntity<Driver> getDriver();
-
-	ResponseEntity<DriverDateTime> getDriverDateTime();
-
-	ResponseEntity<Object> postDriverDateTime(DriverManufacturer model);
-
-	ResponseEntity<Object> postDriverStatusInput(DriverStatusInput model);
-
-	ResponseEntity<Object> notifyAlarm(Alarm model);
-
-	ResponseEntity<Object> notifyDeviceEvent(Event model);
-
-	ResponseEntity<Object> notifyDeviceResource(Resource model);
-
-	ResponseEntity<Object> notifyVehicleAccess(VehicleAccess model);
-
-	ResponseEntity<Object> notifyPersonAccess(Access model);
-
-	ResponseEntity<Object> notifyPersonEvent(PersonEvent model);
-
-	ResponseEntity<Object> notifyClockIn(ClockIn model);
-
-	ResponseEntity<Object> notifyQRCodeAccessNotification(QRCodeAccessNotification model);
-
-	ResponseEntity<Object> notifyBluetoothAccessNotification(BluetoothAccessNotification model);
-
-	ResponseEntity<Object> getServer();
-
+    ResponseEntity<List<ManagerDevice>> getDevice();
+    
+    ResponseEntity<Object> getDeviceStatus();
+    
+    ResponseEntity<Object> getPersonInfo();
+    
+    ResponseEntity<List<AreaControlList>> getAreaControl();
+    
+    ResponseEntity<ManagerDevice> getDeviceId(Long id);
+    
+    ResponseEntity<Object> getBiometry();
+    
+    ResponseEntity<Object> getCardFormat();
+    
+    ResponseEntity<Object> getAccessLevel();
+    
+    ResponseEntity<Object> getHolyday();
+    
+    ResponseEntity<Object> getTimezone();
+    
+    ResponseEntity<Object> getDeviceIdCard(Long id);
+    
+    ResponseEntity<Object> getDeviceIdAccessCard(Long id);
+    
+    ResponseEntity<Object> getDeviceIdAccessBiometry(Long id);
+    
+    ResponseEntity<Object> getDeviceIdRepCredential(Long id);
+    
+    ResponseEntity<Object> getDeviceIdAccessPhoto(Long id);
+    
+    ResponseEntity<Object> createIncludeBiometry(IncludeBiometry model);
+    
+    ResponseEntity<PersonValidationResponse> createAccessRequest(AccessRequest model);
+    
+    ResponseEntity<ValidationResponse> createVehicleAccessRequest(VehicleAccessRequest model);
+    
+    ResponseEntity<PersonValidationResponse> createQRCodeAccessRequest(QRCodeAccessRequest model);
+    
+    ResponseEntity<PersonValidationResponse> createCollectEventStatus(CollectEventStatus model);
+    
+    ResponseEntity<PersonValidationResponse> createCollectEventStatus(DeviceInputStatus model);
+    
+    ResponseEntity<AllPendency> getPendency();
+    
+    ResponseEntity<AllPendency> getPendencyIdDevice(Long id);
+    
+    ResponseEntity<Object> updatePendency(List<PendencyUpdated> model);
+    
+    ResponseEntity<Object> successPendency(PendencyExecuted model);
+    
+    ResponseEntity<Object> createDeviceStatus(DeviceStatus model);
+    
+    ResponseEntity<Driver> getDriver();
+    
+    ResponseEntity<DriverDateTime> getDriverDateTime();
+    
+    ResponseEntity<Object> postDriverDateTime(DriverManufacturer model);
+    
+    ResponseEntity<Object> postDriverStatusInput(DriverStatusInput model);
+    
+    ResponseEntity<Object> notifyAlarm(Alarm model);
+    
+    ResponseEntity<Object> notifyDeviceEvent(Event model);
+    
+    ResponseEntity<Object> notifyDeviceResource(Resource model);
+    
+    ResponseEntity<Object> notifyVehicleAccess(VehicleAccess model);
+    
+    ResponseEntity<Object> notifyPersonAccess(Access model);
+    
+    ResponseEntity<Object> notifyPersonEvent(PersonEvent model);
+    
+    ResponseEntity<Object> notifyClockIn(ClockIn model);
+    
+    ResponseEntity<Object> notifyQRCodeAccessNotification(QRCodeAccessNotification model);
+    
+    ResponseEntity<Object> notifyBluetoothAccessNotification(BluetoothAccessNotification model);
+    
+    ResponseEntity<Object> getServer();
+    
 }
